@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<perro>
+    <raza>
+        <nombre>Perro de aguas español</nombre>
+        <abreviatura>PAE</abreviatura>
+        <origen>Andalucía</origen>
+        <tamanio>
+            <macho>44 a 50 cm</macho>
+            <hembra>40 a 46 cm</hembra>
+        </tamanio>
+        <peso>
+            <macho>19 a 22 kg</macho>
+            <hembra>14 a 19 kg</hembra>
+        </peso>
+
+        <!-- Etiquetas de la raza de perro -->
+        <esperanza-de-vida>10 a 14 años</esperanza-de-vida>
+        <pelaje>Rizado</pelaje>
+        <caracter>Leal, obediente y alegre</caracter>
+    </raza>
+
+    <raza>
+        <nombre>Husky siberiano</nombre>
+        <abreviatura>Perro siberiano</abreviatura>
+        <origen>Norte de Siberia en Rusia</origen>
+        <tamanio>
+            <macho>53 a 60 cm</macho>
+            <hembra>51 a 56 cm</hembra>
+        </tamanio>
+        <peso>
+            <macho>20 a 27 kg</macho>
+            <hembra>16 a 23 kg</hembra>
+        </peso>
+
+        <!-- Etiquetas de la raza de perro -->
+        <esperanza-de-vida>12 a 15 años</esperanza-de-vida>
+        <pelaje>Doble capa y mudan dos veces al año</pelaje>
+        <caracter>Extrovertido, inteligente, amigable y gentil</caracter>
+    </raza>
+
+    <raza>
+        <nombre>Perro Pastor Alemán</nombre>
+        <abreviatura>GSD</abreviatura>
+        <origen>Alemanía</origen>
+        <tamanio>
+            <macho>60 a 65 cm</macho>
+            <hembra>55 a 60 cm</hembra>
+        </tamanio>
+        <peso>
+            <macho>30 a 40 kg</macho>
+            <hembra>22 a 32 kg</hembra>
+        </peso>
+
+        <!-- Etiquetas de la raza de perro -->
+        <esperanza-de-vida>9 a 13 años</esperanza-de-vida>
+        <pelaje>Capa externa densa y áspera con una capa inferior más suave</pelaje>
+        <caracter>Leal, inteligente, confiado y obediente</caracter>
+    </raza>
+</perro>
+
+<!-- Realizado por Irene Frías Ramos -->

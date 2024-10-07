@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medios-de-transporte>
+    <bicicleta>
+        <velocidad>100km/h</velocidad>
+    </bicicleta>
+
+    <patinete> 
+        <velocidad>50 km/h</velocidad>
+    </patinete>
+</medios-de-transporte>
+
+<!-- Realizado por Irene Frías Ramos -->

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <personas name="femenino">
+        <nombre>Irene</nombre>
+        <apellidos>Frías Ramos</apellidos>
+        <ciudad>Málaga</ciudad>
+        <telefono>
+            <movil>+34 634 556 915</movil>
+            <casa>951 248 551</casa>
+        </telefono>
+    </personas>
+
+    <personas name="femenino">
+        <nombre>Alejandra</nombre>
+        <apellidos>Torres Sanchéz</apellidos>
+        <ciudad></ciudad>
+        <telefono>
+            <movil>+34 678 591 245</movil>
+            <casa>953 231 564</casa>
+        </telefono>
+    </personas>
+
+    <personas name="masculino">
+        <nombre>Juan</nombre>
+        <apellidos>Fernández Soler</apellidos>
+        <ciudad>Albacete</ciudad>
+        <telefono>
+            <movil>+34 624 569 265</movil>
+            <casa>952 264 589</casa>
+        </telefono>
+    </personas>
+
+    <personas name="masculino">
+        <nombre>Alberto</nombre>
+        <apellidos>Jiménez Molina</apellidos>
+        <ciudad>Murcia</ciudad>
+        <telefono>
+            <movil>+34 668 592 235</movil>
+            <casa>951 246 523</casa>
+        </telefono>
+    </personas>
+</agenda>
+
+<!-- Realizado por Irene Frías Ramos -->

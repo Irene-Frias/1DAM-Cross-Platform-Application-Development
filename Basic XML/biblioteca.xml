@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro>
+        <titulo>Binding 13 (Los chicos de Tommen 1)</titulo>
+        <autor>Chloe Walsh</autor>
+        <ano-publicacion>2024</ano-publicacion>
+        <genero>Literatura Juvenil</genero>
+        <idioma>Inglés</idioma>
+        <sinopsis>
+            Una historia de amor épica e inolvidable: llega en español Binding 13, el primer 
+            libro del fenómeno de TikTok Los chicos de Tommen, de Chloe Walsh Nunca habrás 
+            sentido con tanta intensidad el poder del primer amor como en este romance 
+            deportivo.
+        </sinopsis>
+    </libro>
+
+    <libro>
+        <titulo>Matrix</titulo>
+        <autor>Lauren Groff</autor>
+        <ano-publicacion>2021</ano-publicacion>
+        <genero>Ficción histórica</genero>
+        <idioma>Inglés</idioma>
+        <sinopsis>
+            Esta obra sigue la vida de Marie de Francia, una joven que es enviada a un convento 
+            inglés en el siglo XII. A medida que crece, Marie se convierte en abadesa y transforma 
+            el convento en un lugar de resistencia, poder y fe. Es un relato sobre la vida monástica 
+            medieval con toques de poder femenino y espiritualidad.
+        </sinopsis>
+    </libro>
+
+    <libro>
+        <titulo>Los trucos de la bestia</titulo>
+        <autor>Lide Aguire</autor>
+        <ano-publicacion>2020</ano-publicacion>
+        <genero>Literatura Juvenil</genero>
+        <idioma>Inglés</idioma>
+        <sinopsis>
+            Mikel camina bajo la lluvia tras otro día de trabajo como fotógrafo en el periódico local 
+            cuando se cruza con un coche que sube la cuesta de un parking cercano. Entonces lo ve al 
+            volante. Solo que los ojos del diablo no son de color rojo, ni siquiera desconocidos: 
+            pertenecen a su vecino de la infancia, Iván Katz, en la actualidad un próspero artista y 
+            emprendedor muy conocido en San Sebastián y que clava su mirada en la de Mikel en un instante 
+            que cambiará la vida de éste radicalmente. No solo por lo que descubre en las pupilas del 
+            hombre, sino por lo que atina a ver en la parte de atrás de su vehículo: un joven 
+            desaparecido hace poco; un niño bien por el que se han levantado las alfombras de 
+            media ciudad.
+        </sinopsis>
+    </libro>
+</biblioteca>
+
+<!-- ¿Podrías transformar algunos de los campos en atributos dentro del etiqueta título? 
+Sí, podría especificarse más mientras no se utilicen ningunas de la etiquetas repetidas. -->
+
+
+<!-- Realizado por Irene Frías Ramos -->
