@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <libro isbn="978-3-16-148410-0">
+        <titulo>Los pilares de tierra</titulo>
+        <autor>Ken Follett</autor>
+        <anio>1989</anio>
+        <precio>29.99</precio>
+    </libro>
+</libreria>
