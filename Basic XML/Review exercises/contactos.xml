@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cont:contactos xmlns:cont="http://www.ejemplo.com/contactos" xmlns:sms="http://www.ejemplo.com/correo">
+    <cont:nombre>Daniel García</cont:nombre>
+    <cont:email>danielgarcia@example.com</cont:email>
+    <cont:telefono>+34 600 123 567</cont:telefono>
+
+
+    <sms:correo>
+        <sms:remitente>danielgarcia@example.com</sms:remitente>
+        <sms:destinatario>juanflores@example.com</sms:destinatario>
+        <sms:asunto>Reunión</sms:asunto>
+        <sms:mensaje>¿Podemos reunirnos mañana a las 11:00 en la sala de reuniones?</sms:mensaje>
+    </sms:correo>
+</cont:contactos>

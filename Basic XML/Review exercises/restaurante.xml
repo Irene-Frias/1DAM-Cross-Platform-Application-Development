@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <plato tipo="Vegano">
+        <nombre>Ensalada</nombre>
+        <tipo>Vegano</tipo>
+    </plato>
+    <plato tipo="No vegano">
+        <nombre>Pollo asado</nombre>
+        <tipo>No vegano</tipo>
+    </plato>
+</menu>

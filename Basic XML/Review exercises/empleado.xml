@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa>
+    <empleado>
+        <nombre>Pedro Martinez</nombre>
+        <email>pedro@ejemplo.com</email>
+        <telefono>123456789</telefono>
+    </empleado>
+</empresa>

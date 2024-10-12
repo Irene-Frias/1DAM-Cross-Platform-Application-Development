@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<per:persona xmlns:per="http://www.ejemplo.com/persona" xmlns:em="http://www.ejemplo.com/empleo">
+    <per:nombre>Juan Pérez</per:nombre>
+    <em:empleo>
+        <em:puesto>Desarrollador</em:puesto>
+        <em:salario>3000</em:salario>
+    </em:empleo>
+</per:persona>

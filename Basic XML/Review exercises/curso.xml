@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Abriremos una etiqueta para agrupar el contenido del curso. -->
+<curso>
+    <!-- A continuación la etiqueta asignatura formará parte de los campos 
+    de nombre y profesor. Esa será la sintaxis que se podrá usar para añadir
+    distintos datos según corresponda. -->
+    <asignatura>
+        <nombre>Programación</nombre>
+        <profesor>Juan López</profesor>
+    </asignatura>
+    <asignatura>
+        <nombre>Base de datos</nombre>
+        <profesor>María Gómez</profesor>
+    </asignatura>
+</curso>
