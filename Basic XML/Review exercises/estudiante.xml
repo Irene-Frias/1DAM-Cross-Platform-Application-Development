@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso>
+    <estudiante status="activo">
+        <nombre>Juan Pérez</nombre>
+        <edad>21</edad>
+    </estudiante>
+    <estudiante status="inactivo">
+        <nombre>Ana Gómez</nombre>
+        <edad>22</edad>
+    </estudiante>
+</curso>

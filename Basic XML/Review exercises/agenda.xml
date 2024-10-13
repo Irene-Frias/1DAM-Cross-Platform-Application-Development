@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contactos>
+    <contacto>
+        <nombre>Rodrigo</nombre>
+        <apellido>Álvarez</apellido>
+        <email>rodrigo.alvarez@example.com</email>
+        <telefono>+34 600 123 456</telefono>
+        <direccion>
+            <calle>Calle Mayor, 1</calle>
+            <ciudad>Madrid</ciudad>
+            <pais>España</pais>
+        </direccion>
+    </contacto>
+    <contacto>
+        <nombre>Ana</nombre>
+        <apellido>Jiménez</apellido>
+        <email>ana.jimenez@example.com</email>
+        <telefono>+34 600 456 321</telefono>
+        <direccion>
+            <calle>Av. de la Constitución, 10</calle>
+            <ciudad>Barcelona</ciudad>
+            <pais>España</pais>
+        </direccion>
+    </contacto>
+</contactos>
