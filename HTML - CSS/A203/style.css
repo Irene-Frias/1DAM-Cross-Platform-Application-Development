@@ -1,0 +1,35 @@
+body {
+    background-image: url("imagenes/fondo-biografia.gif");
+}
+
+#Nombre {
+    color: darkred;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36pt;
+}
+
+#Biografía {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+
+#texto {
+    color:blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+
+#resaltado {
+    color:blue;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+
+#cursiva {
+    color:blue;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
