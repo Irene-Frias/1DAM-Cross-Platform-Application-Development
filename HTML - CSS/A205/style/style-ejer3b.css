@@ -1,0 +1,56 @@
+/* Estilos para los títulos */
+h1 {
+    font-size: 4em;
+    background-color: darkblue;
+    color: red;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    text-align: center;
+}
+
+/* Estilos generales */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: lightyellow;
+}
+
+/* Rectángulo */ 
+#rectangulo {
+    list-style: right;
+    font-weight: bold;
+    background-color: lightgrey;
+    color: black;
+    border: 5px solid black;
+    padding: 20px;
+}
+
+.menu {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline; 
+    float: left; 
+    margin-right: 15px;
+}
+
+/* Estilos en los enlaces */ 
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white; /* Enlace visitado */
+}
+
+a:hover {
+    color: green; /* Enlace al pasar el cursor */
+}
+
+#texto-negro {
+    color: black;
+}

@@ -1,0 +1,41 @@
+/* Estilos para los títulos */
+h1 {
+    font-size: 4em;
+    background-color: white;
+    color: darkblue;
+    border-top: 5px solid darkblue;
+    border-bottom: 5px solid darkblue;
+    text-align: center;
+}
+
+/* Estilos generales */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: lightgrey;
+}
+
+/* Rectángulo */ 
+#rectangulo {
+    background-color: #f5a8a8;
+    color: darkred;
+    border: 5px solid darkred;
+    font-weight: 10em;
+    border-radius: 10px;
+    width: 20%;
+    padding: 10px;
+}
+
+/* Estilos en los enlaces */ 
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue; /* Para enlaces visitados */
+}
+
+a:hover {
+    color: green; /* Para pasar el ratón */
+}
