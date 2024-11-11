@@ -1,0 +1,66 @@
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 40pt;
+    color: #3b8911;
+    text-align: center;
+}
+
+/* Formato de la tabla completa */
+#t-horario {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    border: 5px solid blue;
+    padding: 1px;
+    border-collapse: collapse;
+}
+
+/* Encabezado y celdas */ 
+th {
+    font-family: Comic Sans MS, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    color: white;
+    background-color: #a303a3;
+}
+
+td {
+    font-family: Verdana, sans-serif;
+}
+
+/* Horas para el horario */ 
+
+#horas-resaltado {
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
+    font-size: 20px;
+}
+
+#horas {
+    color: blue;
+    border-top: 1px solid black;
+    border-right: 1px solid blue;
+}
+
+#horas-impar {
+    background-color: #d4e5ea;
+    border: 1px solid black;
+}
+
+#horas-par {
+    background-color: #f0f0f0;
+    border: 1px solid black;
+}
+
+/* Apartado para el recreo */
+
+#recreo {
+    border-left: 1px solid blue;
+    background-color: #ffffa9;
+    color: #a303a3;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+}
