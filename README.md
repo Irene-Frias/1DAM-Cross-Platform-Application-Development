@@ -8,6 +8,9 @@ To start working it is necessary to have a development site where you can progra
 The topics covered during the course are listed below in each of the following sections.
 ### Unit 1 - Basic Concepts XML
 `XML` is a markup language designed to store and transport data in a structured, readable format. Unlike `HTML`, which defines the appearance and structure of a webpage, `XML` focuses solely on data storage and organization, without predefined tags.
+### Unit 2 - Concepts HTML and CSS 
+`HTML` provides the structure of a web page by defining elements like text, images, links, tables, and forms. It uses tags to identify different parts of a page.
+`CSS` is used to control the layout and design of a web page, including colors, fonts, spacing, positioning, and more. It separates content (HTML) from design (CSS).
 
 ## 📄 Project information
 Visit the project [Wiki](https://github.com/Irene-Frias/Markup-Language/wiki) for more information.
