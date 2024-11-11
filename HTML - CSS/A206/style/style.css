@@ -1,0 +1,47 @@
+/* Estilos para títulos */
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 19pt;
+    text-align: center;
+    color: blue;
+}
+
+h2 {
+    font-variant: small-caps;
+    text-decoration: underline dotted;
+    font-family: 18pt;
+    font-weight: bold;
+    color: red;
+}
+
+/* Formato para el texto */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 16pt;
+}
+
+/* Estilo para las imágenes */ 
+.leon {
+    width: 300px;
+    float: left;
+}
+
+.tigre {
+    height: 300px;
+    float: right;
+}
+
+.pantera {
+    clear: both;
+    width: 150px;
+    float: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    width: 50px;
+    height: auto;
+    vertical-align: middle; 
+}
