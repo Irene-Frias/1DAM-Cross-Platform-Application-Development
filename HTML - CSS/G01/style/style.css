@@ -1,0 +1,74 @@
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#cajas {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    display: grid;
+    border: solid 5px red;
+    padding: 0px 25px 25px 25px;
+    grid-template-columns: auto;
+    grid-gap: 25px;
+    grid-template-areas: 
+        "header header"
+        "primera primera"
+        "segunda tercera"
+        "segunda cuarta"
+        "quinta sexta"
+        "septima septima";
+}
+
+.primera {
+    grid-area: primera;
+    border: solid 5px black;
+    background-color: red;
+    text-align: center;
+}
+
+.segunda {
+    grid-area: segunda;
+    border: solid 5px black;
+    background-color: orange;
+    text-align: center;
+}
+
+.tercera {
+    grid-area: tercera;
+    border: solid 5px black;
+    background-color: green;
+    text-align: center;
+}
+
+.cuarta {
+    grid-area: cuarta;
+    border: solid 5px black;
+    background-color: blue;
+    text-align: center;
+}
+
+.quinta {
+    grid-area: quinta;
+    border: solid 5px black;
+    background-color: blue;
+    text-align: center;
+}
+
+.sexta {
+    grid-area: sexta;
+    border: solid 5px black;
+    background-color: green;
+    text-align: center;
+}
+
+.septima {
+    grid-area: septima;
+    border: solid 5px black;
+    background-color: black;
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+h1{
+    font-size: 28pt;
+    color: blue;
+    text-align: center;
+} 
+
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#checkbox {
+    font-style: italic;
+}
+
+#radio {
+    font-style: italic;
+}
+
+#idiomas {
+    color: darkred;
+}
+
+#examen {
+    color: darkgreen;
+}
+
+#matricula {
+    color: darkorange;
+}
+
+#preferencia-horario {
+    color: turquoise;
+}
+
+#botones {
+    text-align: center;
+}
+

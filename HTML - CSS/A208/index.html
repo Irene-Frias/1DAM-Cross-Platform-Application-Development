@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro curso</title>
+        <link rel="stylesheet" href="style/style.css">
+</head>
+    <body>
+        <h1>Registro en curso</h1>    
+
+        <form action="http://testform.montysoft.org/" method="POST">
+            <fieldset>
+                <legend id="idiomas">Idiomas</legend>
+                <input id="idioma" type="checkbox" name="idiomaIngles"> Inglés
+                <input id="idioma" type="checkbox" name="idiomaAleman"> Alemán
+                <input id="idioma" type="checkbox" name="idiomaFrances"> Francés
+                <br> 
+                <label for="nivelIdioma">Nivel de Idiomas:</label> 
+                <br> 
+                <textarea id="nivelIdioma" name="nivelIdioma" cols="10" placeholder="Escriba aquí su nivel el idioma elegido. Si no ha elegido ninguno déjelo en blanco"></textarea> 
+            </fieldset>  
+    
+            <fieldset>
+                <legend id="examen">Examen</legend>
+    
+                <label for="FechaExamen">Fecha del Examen:</label>
+                    <input type="date" name="fecha">
+                <br>
+                <label for="horaExamen">Hora del Examen:</label>
+                    <input id="horaExamen" type="time" name="hora">
+                <br>
+                <label for="conexionInternet">Conexión a Internet disponible:</label>
+                    <select name="conexionInternet">
+                        <option value="wifi" aria-checked="wifi">Wifi</option>
+                        <option value="cable">Cable</option>
+                        <option value="blutooth">Blutooth</option>
+                    </select>
+                <br>
+                
+                <label for="fotoDNI">Foto del DNI:</label>
+                    <input type="file" name="documento">
+
+                <br>
+
+                <label for="color">Color:</label>
+                    <input type="color" name="favorito">
+    
+            </fieldset>
+    
+            <fieldset>
+                <legend id="matricula">Matrícula</legend>
+                <fieldset>
+                    <legend id="preferencia-horario">Preferencia de horario</legend>
+                    <label for="preferenciaHorario"></label>
+                    
+                    <label for="diurno">
+                        <input id="diurno" type="radio" name="preferenciaHorario" value="diurno" checked> Diurno
+                    </label>
+                    <label for="nocturno">
+                        <input id="nocturno" type="radio" name="preferenciaHorario" value="nocturno"> Nocturno
+                    </label>
+
+                </fieldset>
+
+                <br>
+                <label for="instituto">Instituto:</label>
+                    <input id="instituto" type="text" name="instituto" maxlength="100">
+                <br>
+                <label for="estudios">Estudios:</label>
+                    <input id="estudios" type="text" name="estudios" maxlength="50">
+                <br>
+                <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre" maxlength="50" required>
+                <br>
+                <label for="email">Email:</label>
+                    <input id="email" type="email" name="correo" size="30" required>
+                <br>
+                <label for="telefono">Teléfono:</label>
+                <input id="telefono" type="tel" name="telefono" pattern="(\+[0-9]{2})? ?[0-9]{9}">
+
+            </fieldset>
+
+            <div id="botones">
+                <input id="submit" type="submit" value="Enviar">
+                <input id="reset" type="reset" value="Reiniciar">
+            </div>
+            
+        </form>
+
+    </body>
+</html>

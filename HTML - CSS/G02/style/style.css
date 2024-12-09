@@ -1,0 +1,103 @@
+.menu {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+#menu-principal {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style: right;
+    font-weight: bold;
+    background-color: rgb(195, 220, 248);
+    color: black;
+    border: 5px solid rgb(195, 220, 248);
+    padding-bottom:30px;
+    margin: auto;
+    padding-top: 15px;
+}
+
+.menu-principal {
+    background-color: blue;
+    margin-top: 20px;
+} 
+
+.menu li {
+    display: inline; 
+    float: left; 
+    margin-right: 15px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: rgb(195, 195, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#cajas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 1fr; /* 4 columnas para contenido, 1 para anuncios */
+    grid-gap: 25px;
+    grid-template-areas: 
+        "primera segunda tercera cuarta anuncios"
+        "primera segunda tercera cuarta anuncios"
+        "footer footer footer footer anuncios";
+    padding: 25px;
+    border: 5px solid white;
+}
+
+.primera {
+    grid-area: primera;
+    border: solid 5px rgb(202, 201, 201);
+    background-color: rgb(202, 201, 201);
+    padding: 20px;
+}
+
+.segunda {
+    grid-area: segunda;
+    border: solid 5px rgb(202, 201, 201);
+    background-color: rgb(202, 201, 201);
+    padding: 20px;
+}
+
+.tercera {
+    grid-area: tercera;
+    border: solid 5px rgb(202, 201, 201);
+    background-color: rgb(202, 201, 201);
+    padding: 20px;
+}
+
+.cuarta {
+    grid-area: cuarta;
+    border: solid 5px rgb(202, 201, 201);
+    background-color: rgb(202, 201, 201);
+    padding: 20px;
+}
+
+#anuncios {
+    grid-area: anuncios;
+    background-color: orange;
+    padding: 20px;
+    border: solid 5px orange;
+    text-align: center;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: rgb(199, 238, 250);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
