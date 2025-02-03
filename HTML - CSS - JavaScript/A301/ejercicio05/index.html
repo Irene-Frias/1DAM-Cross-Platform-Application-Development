@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="width-device-view-port">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Ejercicio 5 - Eventos</title>
+  </head>
+  <body>
+    <header>
+      <h2>Eventos de clic</h2>
+    </header>
+    <main>    
+      <form action="http://testform.montysoft.org" method="post" onsubmit="alert('Se está cancelando el enviando del formulario');event.preventDefault();">
+        <fieldset>
+          <legend>Datos de Matrícula</legend>
+          <label for="nombre">Instituto:</label>
+          <input required type="text" id="nombre" name="nombre" maxlength="100" placeholder="Por ej. IES Belén" required><br>
+          
+          <br>
+
+          <label for="fotografía">Fotografía:</label>
+          <input type="file" id="fichero" name="fichero"><br><br>
+        
+          <label for="comentario">Comentarios:</label><br>
+          <textarea id="comentario" name="comentario" rows="6" cols="54" placeholder="Introduzca aquí su comentario"></textarea>
+          
+          <br><br>
+      
+          <input type="submit" value="Enviar"> <input type="reset" value="Reiniciar">
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="width-device-view-port">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Ejercicio 3 - Eventos</title>
+  </head>
+  <body>
+    <header>
+      <h2>Eventos de clic</h2>
+    </header>
+    <main>           
+
+      <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" oninput="alert('Está modificando el nombre')"><br>
+      
+      <label for="lista">Selecciona un país:</label>
+      <select name="lista" id="lista" oninput="alert('Ha cambiado la lista')">
+            <option value="es">España</option>
+            <option value="fr">Francia</option>
+            <option value="it">Italia</option>
+        </select>     
+    </main>
+  </body>
+</html>
