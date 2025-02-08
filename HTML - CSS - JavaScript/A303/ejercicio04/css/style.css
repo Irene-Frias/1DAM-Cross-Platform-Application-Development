@@ -1,0 +1,11 @@
+body {
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url("../img/estrellas.jpg");
+    color: white;
+}
+
+h1 {
+    font-size: 45px;
+}

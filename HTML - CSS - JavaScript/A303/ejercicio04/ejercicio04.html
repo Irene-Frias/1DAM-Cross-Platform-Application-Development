@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 04</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script> 
+</head>
+<body onload="iniciar()">
+    <h1>Calcular el peso de un objeto en un planeta</h1>
+    
+    <input type="number" name="peso" id="peso" placeholder="Ingresa tu peso en kg">
+    
+    <select id="planeta" name="planeta" onchange="cambiarPlaneta()">
+        <option value="seleccionar" selected>Selecciona un planeta</option>
+        <option value="0">Mercurio</option>
+        <option value="1">Venus</option>
+        <option value="2">Tierra</option>
+        <option value="3">Marte</option>
+        <option value="4">Júpiter</option>
+        <option value="5">Saturno</option>
+        <option value="6">Urano</option>
+        <option value="7">Neptuno</option>
+        <option value="8">Plutón</option>
+    </select>
+
+    <button onclick="actualizar()">Calcular Peso</button>
+
+    <div id="error" style="color: red; display: none;"></div>
+    
+    <table id="contenedor">
+        <tr>
+            <td><img id="imagenPlaneta" src="" alt="Imagen del planeta"></td>
+            <td>
+                <div id="tituloPeso" style="display: none">El peso del objeto en <span id="nombrePlaneta"></span> es:</div>
+                <div id="pesoObjeto"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

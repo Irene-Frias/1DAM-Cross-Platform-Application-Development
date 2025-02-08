@@ -1,0 +1,62 @@
+h1 {
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+    background-color: rgb(223, 183, 226);
+}
+
+#contenido {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+font-family: Tahoma, sans-serif;
+font-size: 18pt;
+margin: 0;
+}
+
+#contenedor {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#contenedor td {
+    margin: 2px;
+}
+
+#campo {
+    text-align: center;
+}
+
+#numeros {
+    width: 100%; 
+}
+
+#numeros td {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.primo {
+    background-color: red;
+    color: white;
+}
+
+.par {
+    background-color: green;
+    color: white;
+}
+
+.impar {
+    background-color: yellow;
+    color: black;
+}

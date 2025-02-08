@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ejercicio 02</title>    
+</head>
+<body onload="iniciar()">
+    <h1>Generador de números</h1>
+    
+    <table id="contenedor">
+        <tr>
+            <td id="campo">
+                <input type="text" size="5" name="limite" id="limite" required placeholder="Ingrese un número"> 
+                <button onclick="actualizar()">Generar Números</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table id="numeros"></table>
+            </td>
+        </tr>
+    </table>  
+    
+    <script src="js/index.js"></script> 
+</body>
+</html>
