@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Pokémon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script> 
+</head>
+<body>
+    <h1>Buscador de Pokémon</h1>
+
+    <br><br>
+
+    <div class="contenedor-buscar">
+        <input type="text" name="busqueda" id="busqueda" placeholder="Busca una Pokémon">      
+        <button onclick="buscar()">Buscar</button>
+    </div>
+
+    <br>
+
+    <table>
+        <tr>
+            <td class="datos">Nombre</td>
+            <td class="datos">Imagen</td>
+            <td class="datos">Altura</td>
+            <td class="datos">Peso</td>            
+        </tr>
+        <tr>
+            <td id="nombre"></td>            
+            <td><img id="representacion" src="" alt=""></td>
+            <td id="altura"></td>
+            <td id="peso"></td>
+        </tr>        
+    </table>
+
+    <br>
+    <div class="contenedor-buscar">
+        <p id="mesg-error"></p>
+    </div>
+</body>
+</html>
