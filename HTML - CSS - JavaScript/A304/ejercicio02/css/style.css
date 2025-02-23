@@ -1,0 +1,39 @@
+body {
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: black;
+    background:  rgb(177, 224, 233);
+}
+
+h1 {
+    font-size: 45px;
+}
+
+table {
+    border: 5px solid blue; 
+    background-color: lightblue; 
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    border-style: double;
+}
+
+td, th {
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.datos {
+    font-weight: bold;
+}
+
+.desplazar-derch {
+    text-align: right;
+    align-items: right;    
+    font-weight: none;
+}
+
+th {
+    width: 20%;
+}

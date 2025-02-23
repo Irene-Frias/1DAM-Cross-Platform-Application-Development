@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteorología del mundo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script> 
+</head>
+<body>
+    <h1>Información meteorológica de Málaga</h1>
+    
+    <br><br>
+    
+    <table>
+        <tr>
+            <td class="datos">Temperatura:</td>
+            <td class="desplazar-derch" id="temperatura"></td>
+            <td rowspan="4"><img id="representacion" src="" alt=""></td>
+        </tr>
+        <tr>
+            <td class="datos">Lluvia Actual:</td>
+            <td class="desplazar-derch" id="lluvia-actual"></td>
+        </tr>
+        <tr>
+            <td class="datos">Precipitación acumulada:</td>
+            <td class="desplazar-derch" id="duracion"></td>
+        </tr>
+        <tr>
+            <td class="datos">Velocidad del viento:</td>
+            <td class="desplazar-derch" id="velocidad-viento"></td>
+        </tr>
+            <td colspan="3" id="dia-actual"></td>
+        <tr>
+            <td colspan="3"><button onclick="actualizar()">Actualizar</button></td>
+        </tr>
+    </table>
+</body>
+</html>

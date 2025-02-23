@@ -1,0 +1,28 @@
+body {
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+table {
+    width: 60%;
+    margin: auto;
+    border: 2px white solid;
+    text-align: center;
+    align-items: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px white solid;
+}
+
+th {
+    width: 20%;
+}

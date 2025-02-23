@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Películas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script> 
+</head>
+<body>
+    <h1>Busqueda de películas</h1>
+    
+    <input type="text" name="busqueda" id="busqueda" placeholder="Busca una película">
+        
+    <button onclick="buscar()">Buscar película</button>
+
+    <br><br>
+    
+    <table>
+        <tr>
+            <td>Título</td>
+            <td id="titulo"></td>
+            <td rowspan="3"><img id="poster" src="" alt=""></td>
+        </tr>
+        <tr>
+            <td>Año</td>            
+            <td id="anyo"></td>
+        </tr>
+        <tr>
+            <td>Duración</td>
+            <td id="duracion"></td>
+        </tr>
+    </table>
+</body>
+</html>
