@@ -7,10 +7,17 @@ To start working it is necessary to have a development site where you can progra
 ## 📚 Units
 The topics covered during the course are listed below in each of the following sections.
 ### Unit 1 - Basic Concepts XML
-`XML` is a markup language designed to store and transport data in a structured, readable format. Unlike `HTML`, which defines the appearance and structure of a webpage, `XML` focuses solely on data storage and organization, without predefined tags.
+- **`XML`** *(Extensible Markup Language)* is a markup language designed to store and transport data in a structured, readable format. Unlike `HTML`, which defines the appearance and structure of a webpage, `XML` focuses solely on data storage and organization, without predefined tags.
+  
 ### Unit 2 - Concepts HTML and CSS 
-`HTML` provides the structure of a web page by defining elements like text, images, links, tables, and forms. It uses tags to identify different parts of a page.
-`CSS` is used to control the layout and design of a web page, including colors, fonts, spacing, positioning, and more. It separates content (HTML) from design (CSS).
+- **`HTML`**  *(Hypertext Markup Language)* provides the structure of a web page by defining elements like text, images, links, tables, and forms. It uses tags to identify different parts of a page.
+- **`CSS`** *(Combined Charging System)* is used to control the layout and design of a web page, including colors, fonts, spacing, positioning, and more. It separates content `HTML` from design `CSS`.
+
+### Unit 3 - Key Web Development Concepts: JavaScript, DOM, and JSON
+- **`JavaScript`** is an event-driven programming language that adds interactivity to web pages, such as handling mouse clicks, animations, and more. It is used to manipulate the `DOM`, respond to user actions, validate forms, make server requests, and more. Together with `HTML` and `CSS`, it forms the foundation of web development.
+- **`DOM`** *(Document Object Model)* is a tree-like representation of an `HTML` or `XML` document. It allows developers to manipulate web page elements, enabling JavaScript to dynamically change the content, structure, and style in real time.
+- **`JSON`** *(JavaScript Object Notation)* is a lightweight data exchange format that uses a key-value pair structure. It is easy to read and write, commonly used for storing and transferring data between servers and web applications. `JSON` is language-independent and organizes data using objects and arrays.
+
 
 ## 📄 Project information
 Visit the project [Wiki](https://github.com/Irene-Frias/Markup-Language/wiki) for more information.
