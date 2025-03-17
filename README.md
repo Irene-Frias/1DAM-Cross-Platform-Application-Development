@@ -19,7 +19,7 @@ The topics covered during the course are listed below in each of the following s
 - **`JSON`** *(JavaScript Object Notation)* is a lightweight data exchange format that uses a key-value pair structure. It is easy to read and write, commonly used for storing and transferring data between servers and web applications. `JSON` is language-independent and organizes data using objects and arrays.
 
 ### Unit 4 - Defining and Validating XML with DTD: Structure, Rules, and Applications
-- **`DTD`** *Document Type Definition* is a set of rules that determines the structure and format that an `XML` document must follow. Its purpose is to ensure that an `XML` document is valid, that is, that it complies with a previously defined structure.
+- **`DTD`** *(Document Type Definition)* is a set of rules that determines the structure and format that an `XML` document must follow. Its purpose is to ensure that an `XML` document is valid, that is, that it complies with a previously defined structure.
 `XML` is widely used in web applications, databases, and information exchange systems because of its ability to represent data in a human- and machine-readable manner.
 
 ## 📄 Project information
