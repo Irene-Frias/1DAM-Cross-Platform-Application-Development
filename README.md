@@ -1,5 +1,5 @@
 # Markup-Language
-Markup-Language exercises carried out for the subject of Cross-Platform Application Development at I.E.S. Belén (Malaga).
+Markup-Language exercises carried out for the subject of Cross-Platform Application Development at I.E.S. Belen (Malaga).
 Most of the exercises in this repository are taken from the programming manual by the teacher. Also with the help of the notes on this page called consortium [`World Wide Web (W3C)`](https://www.w3.org/) is an international consortium that generates recommendations and standards.
 
 To start working it is necessary to have a development site where you can program. In this case I will install the [`Visual Code Studios`](https://code.visualstudio.com/download).
@@ -18,6 +18,9 @@ The topics covered during the course are listed below in each of the following s
 - **`DOM`** *(Document Object Model)* is a tree-like representation of an `HTML` or `XML` document. It allows developers to manipulate web page elements, enabling JavaScript to dynamically change the content, structure, and style in real time.
 - **`JSON`** *(JavaScript Object Notation)* is a lightweight data exchange format that uses a key-value pair structure. It is easy to read and write, commonly used for storing and transferring data between servers and web applications. `JSON` is language-independent and organizes data using objects and arrays.
 
+### Unit 4 - Defining and Validating XML with DTD: Structure, Rules, and Applications
+- **`DTD`** *(Document Type Definition)* is a set of rules that determines the structure and format that an `XML` document must follow. Its purpose is to ensure that an `XML` document is valid, that is, that it complies with a previously defined structure.
+`XML` is widely used in web applications, databases, and information exchange systems because of its ability to represent data in a human- and machine-readable manner.
 
 ## 📄 Project information
 Visit the project [Wiki](https://github.com/Irene-Frias/Markup-Language/wiki) for more information.
