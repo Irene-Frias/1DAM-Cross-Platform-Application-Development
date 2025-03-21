@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pedidos SYSTEM "pedidos.dtd">
+
+<pedidos>
+    <pedido>
+        <empresa CIF="B18398769">ACCENTUR</empresa>
+        <producto>HP EliteBook 850 G6</producto>
+        <fecha>23-03-2025</fecha>        
+    </pedido>
+    <pedido>
+        <cliente NIF="4587245387W">Federico</cliente>
+        <producto>Teclado</producto>
+        <fecha>18-03-2025</fecha>   
+        <factura numfactura="345687" cliente="4587245387W">
+            <emisor>Juan</emisor>
+            <total>361,79</total>
+            <fecha>30-03-2025</fecha>
+        </factura>     
+    </pedido>
+</pedidos>
+

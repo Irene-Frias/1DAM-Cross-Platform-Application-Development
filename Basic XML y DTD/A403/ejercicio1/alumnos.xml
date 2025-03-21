@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE alumnos SYSTEM "alumnos.dtd">
+
+<alumnos>
+    <alumno numAlumno="A-01" altura="1,60" sexo="mujer" ayudadoPor="A-02">
+        <nombre>María</nombre>
+        <apellidos>Jiménez</apellidos>
+        <domicilio>Calle Carlton</domicilio>
+        <telefono pertenece="padre">+34 678 458 219</telefono>
+        <centroDeportivo>Puerta Oscura</centroDeportivo>
+        <aficion>Baloncesto</aficion>
+        <aficion>Leer</aficion>
+        <provincia>Málaga</provincia>
+        <comentarios>Muy trabajadora</comentarios>
+        <evaluacion>Primera</evaluacion>
+        <calificacion>8,23</calificacion>
+    </alumno>
+    <alumno numAlumno="A-02" altura="1,68" sexo="hombre">
+        <nombre>Paco</nombre>
+        <apellidos>Martínez</apellidos>
+        <domicilio>Pasaje Aurora</domicilio>
+        <telefono pertenece="madre">+34 656 558 913</telefono>
+        <telefono pertenece="tutor">+34 758 425 785</telefono>
+        <aficion>Videojuegos</aficion>
+        <pais>Italia</pais>
+        <comentarios>Debe trabajar más</comentarios>
+        <evaluacion>Primera</evaluacion>
+        <calificacion>6,12</calificacion>
+    </alumno>
+</alumnos>
+
