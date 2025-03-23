@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cursos SYSTEM "cursosformacion.dtd">
+
+<cursos>
+    <curso codigo="C-100">
+        <nombre>Introducción a bases de datos</nombre>
+        <duracion>3 horas</duracion>
+        <profesor>María</profesor>
+        <horario>Mañana</horario>
+        <alumno>
+            <nombre>Rafael</nombre>
+            <matricula>1245785891</matricula>
+        </alumno>
+        <alumno>
+            <nombre>Sergio</nombre>
+            <matricula>2345678924</matricula>
+            <comentario>Tiene que esforzarse más</comentario>
+        </alumno>        
+    </curso>
+    <curso codigo="C-101">
+        <nombre>Introducción a Lenguajes de Marcas</nombre>
+        <duracion>2 horas</duracion>
+        <profesor>Manolo</profesor>
+        <horario>Mañana</horario>
+        <alumno>
+            <nombre>Francisco</nombre>
+            <matricula>02456851565</matricula>
+            <comentario>Trabajador</comentario>
+        </alumno>
+        <alumno>
+            <nombre>Pedro</nombre>
+            <matricula>12456789524</matricula>
+        </alumno>
+    </curso>    
+</cursos>
+

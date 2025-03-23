@@ -1,0 +1,15 @@
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, apellidos, cargo, departamento, salario, telefono,
+                    proyecto?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT departamento (#PCDATA)>            
+<!ELEMENT salario (#PCDATA)>
+<!ELEMENT proyecto (nombre, fecha)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+
+<!ATTLIST telefono dispositivo (movil | fijo) #REQUIRED>
+<!ATTLIST empleado id_empleado ID #REQUIRED>
+

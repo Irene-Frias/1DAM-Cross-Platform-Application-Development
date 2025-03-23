@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tienda [
+  <!ELEMENT tienda (nombre, direccion, productos)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT direccion (#PCDATA)>
+  <!ELEMENT productos (producto*)>
+  <!ELEMENT producto (nombre, precio)>
+  <!ELEMENT precio (#PCDATA)>
+  <!ATTLIST producto id ID #IMPLIED>
+]>
+
+<tienda>
+    <nombre>Electro Hogar</nombre>
+    <direccion>Avenida Central, 45</direccion>
+    <productos>
+        <producto id="P001">
+            <nombre>Televisor Samsung</nombre>
+            <precio>599.99</precio>
+        </producto>
+        <producto>
+            <nombre>Lavadora LG</nombre>
+            <precio>299.50</precio>
+        </producto>
+    </productos>
+</tienda>
+

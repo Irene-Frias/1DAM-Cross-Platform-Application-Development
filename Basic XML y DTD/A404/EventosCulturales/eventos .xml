@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE eventos SYSTEM "eventos.dtd">
+
+<eventos>
+    <evento codigo="C-202">
+        <nombre>Fiesta</nombre>
+        <fecha>06-03-2025</fecha>
+        <hora>23:00</hora>
+        <lugar>La Curiosa</lugar>
+        <informacion>dfsd</informacion>
+        <gratuito>Gratis</gratuito>
+    </evento>
+    <evento codigo="C-303">
+        <nombre>Boda</nombre>
+        <fecha>18-03-2025</fecha>
+        <hora>10:00</hora>
+        <lugar>Valtari</lugar>
+        <pago>20000</pago>
+    </evento>
+</eventos>

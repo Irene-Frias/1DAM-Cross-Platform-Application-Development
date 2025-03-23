@@ -1,0 +1,13 @@
+<!ELEMENT peliculas (pelicula+)>
+<!ELEMENT pelicula (titulo, director, anyoestreno, genero, duracion, actores+, 
+                    sinopsis?)>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT anyoestreno (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT actores (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ATTLIST pelicula id ID #REQUIRED>
+

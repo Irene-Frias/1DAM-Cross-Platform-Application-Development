@@ -1,0 +1,11 @@
+<!ELEMENT eventos (evento+)>
+
+<!ELEMENT evento (nombre, fecha, hora, lugar, informacion?, (gratuito | pago)?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT lugar (#PCDATA)>
+<!ATTLIST evento codigo ID #REQUIRED>
+<!ELEMENT informacion (#PCDATA)>
+<!ELEMENT gratuito (#PCDATA)>
+<!ELEMENT pago (#PCDATA)>

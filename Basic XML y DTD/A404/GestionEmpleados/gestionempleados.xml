@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE empleados SYSTEM "gestionempleados.dtd">
+
+<empleados>
+    <empleado id_empleado="E-020">
+        <nombre>Eustaquio</nombre>
+        <apellidos>Jiménez</apellidos>
+        <cargo>administrativo</cargo>
+        <departamento>Recursos Humanos</departamento>
+        <salario>1500</salario>
+        <telefono dispositivo="movil">+34 651 254 581</telefono>
+    </empleado>
+    <empleado id_empleado="E-021">
+        <nombre>Lucía</nombre>
+        <apellidos>Martínez</apellidos>
+        <cargo>administrativo</cargo>
+        <departamento>Marketing</departamento>
+        <salario>1600</salario>
+        <telefono dispositivo="fijo">+34 651 254 581</telefono>
+        <proyecto>
+            <nombre>Misterio</nombre>
+            <fecha>04-02-2025</fecha>
+        </proyecto>
+    </empleado>
+</empleados>
+

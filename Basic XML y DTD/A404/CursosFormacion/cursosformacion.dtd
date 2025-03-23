@@ -1,0 +1,11 @@
+<!ELEMENT cursos (curso+)>
+<!ELEMENT curso (nombre, duracion, profesor, horario, alumno+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT profesor (#PCDATA)>
+<!ELEMENT horario (#PCDATA)>
+<!ATTLIST curso codigo ID #REQUIRED>
+<!ELEMENT alumno (nombre, matricula, comentario?)>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
+

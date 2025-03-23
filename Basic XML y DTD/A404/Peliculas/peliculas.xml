@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE peliculas SYSTEM "peliculas.dtd">
+
+<peliculas>
+    <pelicula id="C-10">
+        <titulo>Pulp Fiction</titulo>
+        <director>Quentin Tarantino</director>
+        <anyoestreno>1994</anyoestreno>
+        <genero>Acción</genero>
+        <duracion>1 hora y 30 min</duracion>
+        <actores>John Travolta</actores>
+        <sinopsis>Jules y Vincent, dos asesinos a sueldo con 
+            no demasiadas luces, trabajan para el gángster Marsellus 
+            Wallace. Vincent le confiesa a Jules que Marsellus le ha
+            pedido que cuide de Mia, su atractiva mujer. Jules le 
+            recomienda prudencia porque es muy peligroso sobrepasarse 
+            con la novia del jefe. Cuando llega la hora de trabajar, 
+            ambos deben ponerse "manos a la obra". Su misión: recuperar
+            un misterioso maletín.</sinopsis>
+    </pelicula>
+    <pelicula id="C-11">
+        <titulo>El padrino</titulo>
+        <director>Francis Ford Coppola</director>
+        <anyoestreno>1972</anyoestreno>
+        <genero>Acción</genero>
+        <duracion>1 hora y 45 min</duracion>
+        <actores>Marlon Brando</actores>
+        <actores>Al Pacino</actores>
+        <actores>James Caan</actores>
+    </pelicula>
+</peliculas>
+

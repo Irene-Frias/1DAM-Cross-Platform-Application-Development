@@ -1,0 +1,17 @@
+<!ELEMENT pedidos (pedido+)>
+<!ELEMENT pedido (fecha, cliente, listaproductos+, total)>
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT cliente (nombre, direccion, comentario?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
+<!ATTLIST cliente NIF CDATA #REQUIRED>
+
+<!ELEMENT listaproductos (producto, cantidad, preciounitario)>
+<!ELEMENT producto (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT preciounitario (#PCDATA)>
+
+<!ELEMENT total (#PCDATA)>
+
