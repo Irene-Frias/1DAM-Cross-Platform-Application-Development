@@ -22,6 +22,9 @@ The topics covered during the course are listed below in each of the following s
 - **`DTD`** *(Document Type Definition)* is a set of rules that determines the structure and format that an `XML` document must follow. Its purpose is to ensure that an `XML` document is valid, that is, that it complies with a previously defined structure.
 `XML` is widely used in web applications, databases, and information exchange systems because of its ability to represent data in a human- and machine-readable manner.
 
+- **`XML Schema`** *(XSD - XML Schema Definition)* is a more powerful and flexible alternative to `DTD` for defining the structure and constraints of an `XML` document. It allows specifying data types, element relationships, and validation rules in a more precise way.
+Unlike `DTD`, `XML Schema` is written in `XML` itself, making it more extensible and easier to integrate with modern applications. It supports namespaces, data types (such as integers, dates, and booleans), and complex structures, making it widely used in web services, data validation, and structured information exchange.
+
 ## 📄 Project information
 Visit the project [Wiki](https://github.com/Irene-Frias/Markup-Language/wiki) for more information.
 
