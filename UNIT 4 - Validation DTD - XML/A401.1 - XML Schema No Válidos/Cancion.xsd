@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="cancion">
+		<xs:complexType>
+			<xs:sequence>
+				<!--
+					Inserte tres elementos de tipo simple
+					1. titulo
+					2. año
+					3. artista
+				-->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+

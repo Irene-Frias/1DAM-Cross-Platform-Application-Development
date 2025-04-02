@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cancion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Cancion3.xsd">
+	<titulo>Ticket To Ride</titulo>
+	<anyo>1965</anyo>
+	<artista>Beatles</artista>
+	<duracion>PT3M3S</duracion>
+</cancion>
+
