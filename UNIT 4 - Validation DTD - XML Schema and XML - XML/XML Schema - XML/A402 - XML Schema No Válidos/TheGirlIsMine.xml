@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<cancion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Cancion2.xsd">
+	<titulo>The Girl Is Mine</titulo>
+	<anyo>1983</anyo>
+	<duracion>media</duracion>
+	<artistas>
+		<artista>Michael Jackson</artista>
+		<artista>Paul McCartney</artista>
+	</artistas>
+</cancion>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cancion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Cancion.xsd">
+	<titulo tipo="duet">The Girl Is Mine</titulo>
+	<anyo>1983</anyo>
+	<duracion>media</duracion>
+	<artistas>
+		<artista>Michael Jackson</artista>
+		<artista>Paul McCartney</artista>
+	</artistas>
+	<letra>
+		<estrofa artista="MJ">
+			<linea>Every night she walks right in my dreams</linea>
+			<linea>Every night she walks right in my dreams</linea>
+			<linea>I'm so proud I am the only one</linea>
+			<linea>Who is special in her heart</linea>
+			<linea>The girl is mine</linea>
+			<linea>The doggone girl is mine</linea>
+			<linea>I know she's mine</linea>
+			<linea>Because the doggone girl is mine</linea>
+		</estrofa>
+		<estrofa artista="PM">
+			<linea>I don't understand the way you think</linea>
+			<linea>Saying that she's yours not mine</linea>
+			<linea>Sending roses and your silly dreams</linea>
+			<linea>Really just a waste of time</linea>
+			<linea>Because she's mine</linea>
+			<linea>The doggone girl is mine</linea>
+			<linea>Don't waste your time</linea>
+			<linea>Because the doggone girl is mine </linea>
+			<linea>I love you more than he</linea>
+			<linea>(Take you anywhere)</linea>
+		</estrofa>
+		<estrofa artista="MJ">
+			<linea>I know she'll tell you I'm the one for her</linea>
+			<linea>'Cause she said I blow her mind</linea>
+			<linea>The girl is mine</linea>
+			<linea>The doggone girl is mine</linea>
+			<linea>Don't waste your time</linea>
+			<linea>Because the doggone girl is mine</linea>
+		</estrofa>
+	</letra>
+</cancion>
+
