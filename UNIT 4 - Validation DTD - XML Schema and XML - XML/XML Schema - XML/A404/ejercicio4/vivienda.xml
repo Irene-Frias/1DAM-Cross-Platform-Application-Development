@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Vivienda.xsd">
+  <habitacion tipo="Sala de estar">
+    <puertas>2</puertas>
+    <ventanas>3</ventanas>
+    <suelo parquet="true">40</suelo>
+    <electricidad>
+      <luces>5</luces>
+      <interruptores>3</interruptores>
+    </electricidad>
+  </habitacion>
+
+  <habitacion tipo="Dormitorio">
+    <puertas>1</puertas>
+    <ventanas>1</ventanas>
+    <suelo>10</suelo>
+    <electricidad>
+      <luces>3</luces>
+      <interruptores>5</interruptores>
+    </electricidad>
+  </habitacion>
+</vivienda>

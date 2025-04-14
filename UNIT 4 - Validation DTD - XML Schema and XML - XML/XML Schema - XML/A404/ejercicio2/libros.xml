@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Libros.xsd">
+	<cabecera>
+		<titulo>Dos corriendo por tres calles</titulo>
+		<autores>
+			<autor>Jimmy Dos Pistolas</autor>
+		</autores>
+		<editorial>Guijarro</editorial>
+	</cabecera>
+	<cuerpo>
+		<capitulo>
+			<titulo>Una espera inesperada</titulo>
+			<p>Johnny cabalgaba <i>rápidamente</i> por la pradera.</p>
+			<p>Su caballo comenzó a echar espuma por la <mi>boca</mi> y decidió detenerse.</p>
+			<p>Se dijo: Voy a esperar</p>
+		</capitulo>
+		<capitulo>
+			<titulo>Fin de la espera</titulo>
+			<p>Tras pasar la noche, el caballo descansó.</p>
+			<p>Johnny ensilló al caballo y partió hacia el horizonte...</p>
+			<p>FIN</p>
+		</capitulo>
+	</cuerpo>
+</libro>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cadenas-montañosas>
+  <cadena-montañosa nombre="Pirineos">
+    <montaña>
+      <nombre>Pico Aneto</nombre>
+      <region>Maladeta-Aneto</region>
+      <altura unidad-medida="m">3404</altura>
+    </montaña>
+    <montaña>
+      <nombre>Sierra Morena</nombre>
+      <region>La Múnia</region>
+      <altura unidad-medida="m">3090</altura>
+    </montaña>
+  </cadena-montañosa>
+  <cadena-montañosa nombre="Sierra Nevada">
+    <montaña>
+      <nombre>Mulhacén</nombre>
+      <region>Sierra norte</region>
+      <altura unidad-medida="m">3480</altura>
+    </montaña>
+    <montaña>
+      <nombre>Cartujo</nombre>
+      <region>Sierra sur</region>
+      <altura unidad-medida="m">3152</altura>
+    </montaña>
+  </cadena-montañosa>
+</cadenas-montañosas>

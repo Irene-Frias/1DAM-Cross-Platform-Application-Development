@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cabecera" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string" 
+                                        minOccurs="0"/>
+                            <xs:element name="autores" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="autor" 
+                                                    type="xs:string" 
+                                                    minOccurs="1"
+                                                    maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="editorial" type="xs:string" 
+                                        minOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>  
+                <xs:element name="cuerpo" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="capitulo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string"/>
+                                        <xs:element name="p" minOccurs="0"
+                                                    maxOccurs="unbounded">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="i" 
+                                                                type="xs:string" 
+                                                                minOccurs="0"/>
+                                                    <xs:element name="mi" 
+                                                                type="xs:string"
+                                                                minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>  
+                                    </xs:sequence>
+                                </xs:complexType>                              
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>                           
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>    
+</xs:schema>
+

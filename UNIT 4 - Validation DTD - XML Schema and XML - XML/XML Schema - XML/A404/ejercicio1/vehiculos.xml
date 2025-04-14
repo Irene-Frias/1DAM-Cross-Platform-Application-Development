@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehiculos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Vehiculos.xsd">
+  <vehiculo num-serie="12345678">
+    <nombre>Seat Ibiza</nombre>
+    <modelo>GTI+</modelo>
+    <fabricacion>
+      <inicio>
+        <dia>21</dia>
+        <mes>Julio</mes>
+        <anyo>1992</anyo>
+      </inicio>
+      <fin>
+        <dia>9</dia>
+        <mes>Agosto</mes>
+        <anyo>1992</anyo>
+      </fin>
+    </fabricacion>
+    <modificaciones>
+      <modificacion pagada="true">Aumento cilindrada 2000cc</modificacion>
+      <modificacion>Pedales deportivos</modificacion>
+      <modificacion pagada="false">Caja de cambios 6 velocidades</modificacion>
+      <modificacion>Diferencial autoblocante</modificacion>
+    </modificaciones>
+  </vehiculo>
+  <vehiculo num-serie="87654321">
+    <nombre>Hyundai Coupé</nombre>
+    <modelo>Turbo</modelo>
+    <fabricacion>
+      <inicio>
+        <dia>21</dia>
+        <mes>Septiembre</mes>
+        <anyo>2004</anyo>
+      </inicio>
+      <fin>
+        <dia>24</dia>
+        <mes>Septiembre</mes>
+        <anyo>2004</anyo>
+      </fin>
+    </fabricacion>
+  </vehiculo>
+</vehiculos>

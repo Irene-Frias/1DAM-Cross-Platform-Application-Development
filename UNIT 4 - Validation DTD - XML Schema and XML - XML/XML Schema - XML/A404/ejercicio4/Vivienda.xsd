@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="tipoHabitacion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sala de estar"/>
+            <xs:enumeration value="Dormitorio"/>
+            <xs:enumeration value="Cocina"/>
+            <xs:enumeration value="Salón"/>
+            <xs:enumeration value="Cuarto de baño"/>
+            <xs:enumeration value="Terraza"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="enteroMayorQueCero">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="enteroMayorIgualCero">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="decimalMayorQueCero">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="vivienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="habitacion" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="puertas" type="enteroMayorQueCero"/>
+                            <xs:element name="ventanas" type="enteroMayorIgualCero"/>
+                            <xs:element name="suelo">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="decimalMayorQueCero">
+                                            <xs:attribute name="parquet" type="xs:boolean" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="electricidad">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="luces" type="enteroMayorIgualCero"/>
+                                        <xs:element name="interruptores" type="enteroMayorIgualCero"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="tipo" type="tipoHabitacion" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
