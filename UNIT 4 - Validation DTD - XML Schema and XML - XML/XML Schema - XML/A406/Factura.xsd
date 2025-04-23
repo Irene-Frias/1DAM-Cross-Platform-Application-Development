@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <xs:element name="factura" type="tFactura" />
+    
+    <xs:complexType name="tFactura">
+        <xs:sequence>
+            <xs:element name="emisor" type="tEmisor" />
+            <xs:element name="cliente" type="tCliente" />
+            <xs:element name="baseImponible" type="xs:decimal" />
+            <xs:element name="cuota" type="xs:decimal" />
+            <xs:element name="total" type="xs:decimal" />
+            <xs:element name="formaPago" type="tPago" />
+        </xs:sequence>
+    </xs:complexType> 
+        
+    <xs:complexType name="tEmisor">
+        <xs:sequence>
+            <xs:element name="direccion" type="tDireccion" minOccurs="1"
+              maxOccurs="unbounded" />                       
+            <xs:element name="telefono" type="tTelefonoBase" />             
+            <xs:element name="telefono" type="tNumFax" />
+            <xs:element name="nif" type="tNif" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tDireccion">
+        <xs:sequence>
+            <xs:element name="calle" type="xs:string" />   
+            <xs:element name="numero" type="xs:decimal" />   
+            <xs:element name="puerta" type="xs:decimal" />   
+            <xs:element name="piso" type="xs:decimal" />   
+            <xs:element name="localidad" type="xs:string" />   
+            <xs:element name="provincia" type="xs:string" />   
+            <xs:element name="codigoPostal" type="xs:decimal" />                       
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="tTelefonoBase">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+?[0-9]+" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tNumFax">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+?[0-9]+" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tNif">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]?[0-9]{7,8}[A-Z]" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tCliente">
+        <xs:sequence>
+            <xs:element name="articulos" type="tArticulos" /> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tArticulos">
+        <xs:sequence>
+            <xs:element name="articulo" type="tArticulo" minOccurs="1"
+              maxOccurs="unbounded" /> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tArticulo">
+        <xs:sequence>
+            <xs:element name="referencia" type="xs:string" />   
+            <xs:element name="descripcion" type="xs:decimal" />   
+            <xs:element name="cantidad" type="xs:decimal" />   
+            <xs:element name="precioUnd" type="tPrecio" />  
+            <xs:element name="iva" type="xs:decimal" />   
+            <xs:element name="importe" type="xs:decimal" />    
+        </xs:sequence>
+    </xs:complexType>
+      
+    <xs:simpleType name="tPrecio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tPago">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Efectivo" />
+            <xs:enumeration value="Tarjeta" />
+            <xs:enumeration value="Cheque" />
+            <xs:enumeration value="Pagaré" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

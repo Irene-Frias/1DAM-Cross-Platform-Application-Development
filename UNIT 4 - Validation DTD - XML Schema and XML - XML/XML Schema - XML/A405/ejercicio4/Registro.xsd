@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="registro">
+  	<xs:complexType>
+  		<xs:sequence>
+  			<xs:element ref="consulta"  type="tConsulta"
+                                    minOccurs="1" maxOccurs="unbounded" />
+  		</xs:sequence>
+  	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="consulta" type="tConsulta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="paciente" type="xs:string" minOccurs="0"
+                  maxOccurs="unbounded" />
+                <xs:element name="aseguradora" type="tAseguradora" />
+                <xs:element name="sintomas" type="tSintomas" />
+                <xs:element name="diagnostico" type="xs:string" />
+                <xs:element name="tratamientos" type="tTratamientos" />
+                <xs:element name="seguimiento" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+    
+    <xs:simpleType name="tAseguradora">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Adeslas"/>
+            <xs:enumeration value="Seguridad Social"/>
+            <xs:enumeration value="Sanitas"/>
+            <xs:enumeration value="DKV"/>
+            <xs:enumeration value="Nectar"/>
+        </xs:restriction>
+    </xs:simpleType>
+         
+    <xs:complexType name="tSintomas">
+        <xs:sequence>
+            <xs:element name="sintoma" type="xs:string" minOccurs="1"
+              maxOccurs="unbounded" />           
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tTratamientos">
+        <xs:sequence>
+            <xs:element name="tratamiento" type="tContenido" minOccurs="1"
+              maxOccurs="unbounded" />           
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tContenido">
+        <xs:sequence>
+            <xs:element name="cuidado" type="xs:string" />           
+            <xs:element name="periodicidad" type="xs:string" />      
+            <xs:element name="comentarios" type="xs:string" />      
+        </xs:sequence>
+    </xs:complexType>    
+</xs:schema>
+

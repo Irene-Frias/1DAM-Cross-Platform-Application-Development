@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festival>
+  <nombre>Sound Isidro 2016</nombre>
+  <conciertos>
+    <concierto>
+      <artistas>
+        <artista>The Autunm Commets</artista>
+        <artista>Wild Bats</artista>
+      </artistas>
+      <lugar>Sala El Sol</lugar>
+      <fecha>2016-02-11</fecha>
+      <hora>22:00:00</hora>
+      <precio>16</precio>
+    </concierto>
+    <concierto>
+      <artistas>
+        <artista>Baroness</artista>
+      </artistas>
+      <lugar>Teatro Barcel√≥</lugar>
+      <fecha>2016-03-05</fecha>
+      <hora>22:00:00</hora>
+      <precio>25</precio>
+    </concierto>
+    <concierto>
+      <artistas>
+        <artista>Harrison Ford Fiesta</artista>
+      </artistas>
+      <lugar>Costello Club</lugar>
+      <fecha>2016-02-12</fecha>
+      <hora>21:30:00</hora>
+      <precio>12.95</precio>
+      <enlace>https://harrisonfordfiesta.bandcamp.com/</enlace>
+    </concierto>
+  </conciertos>
+</festival>

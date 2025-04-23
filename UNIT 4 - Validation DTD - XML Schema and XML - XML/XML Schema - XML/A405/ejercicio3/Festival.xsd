@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">    
+    <xs:element name="festival" type="tFestival" />
+    
+    <xs:complexType name="tFestival">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="conciertos" type="tConciertos" />
+        </xs:sequence>
+    </xs:complexType> 
+        
+    <xs:complexType name="tConciertos">
+        <xs:sequence>
+            <xs:element name="concierto" type="tConcierto" minOccurs="1"
+              maxOccurs="unbounded" />           
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tConcierto">
+        <xs:all>
+            <xs:element name="artistas" type="tArtistas" />            
+            <xs:element name="lugar" type="xs:string" />
+            <xs:element name="fecha" type="xs:date" />
+            <xs:element name="hora" type="xs:time" />
+            <xs:element name="precio" type="tPrecio" minOccurs="0" />
+            <xs:element name="enlace" type="xs:anyURI" minOccurs="0" />
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:complexType name="tArtistas">
+        <xs:sequence>
+            <xs:element name="artista" type="xs:string" minOccurs="1"
+              maxOccurs="unbounded" />           
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="tPrecio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+

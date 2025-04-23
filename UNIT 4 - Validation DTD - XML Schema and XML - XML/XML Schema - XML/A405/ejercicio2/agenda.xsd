@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Este es el elemento raiz -->
+  <xs:element name="agenda" type="tAgenda" />
+  <xs:complexType name="tAgenda">
+    <xs:sequence>
+      <xs:element name="contacto" type="tContacto" minOccurs="0"
+        maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tContacto">
+    <xs:all>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="direccion" type="xs:string" />
+      <xs:element name="comentarios" type="tComentarios"
+        minOccurs="0" />
+      <xs:element name="telefonos" type="tTelefonos" minOccurs="0" />
+    </xs:all>
+    <xs:attribute name="fuente" type="tFuenteContacto" />
+  </xs:complexType>
+  <xs:complexType name="tComentarios">
+    <xs:sequence>
+      <xs:element name="comentario" type="xs:string"
+        maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tTelefonos">
+    <xs:sequence>
+      <xs:element name="telefono" type="tTelefono"
+        maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Este va a ser el tipo base de los numeros de telefono (tTelefono) -->
+  <!-- Se crea aparte para dar el formato que debe seguir el contenido simple -->
+  <!-- Cuando se defina tTelefono mas abajo se añadirá el atributo -->
+  <xs:simpleType name="tTelefonoBase">
+    <xs:restriction base="xs:string">
+      <!-- Un numero debe consistir de un prefijo de pais opcional (+34, por ejemplo) 
+        y de nueve números (obligatorios) -->
+      <xs:pattern value="(\+[0-9]{1,2})?[0-9]{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="tTelefono">
+    <xs:simpleContent>
+      <!-- Extendemos el tipo tTelefonoBase que dice que formato sigue el numero 
+        de telefono -->
+      <!-- y le añadimos el atributo -->
+      <xs:extension base="tTelefonoBase">
+        <xs:attribute name="tipo" type="tTipoTelefono" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="tFuenteContacto">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sim" />
+      <xs:enumeration value="google" />
+      <xs:enumeration value="telefono" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tTipoTelefono">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Casa" />
+      <xs:enumeration value="Trabajo" />
+      <xs:enumeration value="Movil personal" />
+      <xs:enumeration value="Movil trabajo" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

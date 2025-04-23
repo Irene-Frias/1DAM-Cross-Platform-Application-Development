@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Factura.xsd">
+    <emisor>
+        <direccion>
+            <calle>Gran Vía</calle>
+            <numero>123</numero>
+            <puerta>2</puerta>
+            <piso>3</piso>
+            <localidad>Madrid</localidad>
+            <provincia>Madrid</provincia>
+            <codigoPostal>28013</codigoPostal>
+        </direccion>
+        <telefono>+34911223344</telefono>
+        <fax>+34911223355</fax>
+        <nif>B1234567C</nif>
+    </emisor>
+    
+    <cliente>
+        <articulos>
+            <articulo>
+                <referencia>ART001</referencia>   
+                <descripcion>Monitor 24 pulgadas</descripcion>
+                <cantidad>2</cantidad>
+                <precioUnd>199.99</precioUnd>
+                <iva>21</iva>
+                <importe>483.98</importe>
+            </articulo>
+        </articulos>
+    </cliente>
+    
+    <baseImponible>399.98</baseImponible>
+    <cuota>83.99</cuota>
+    <total>483.97</total>
+    
+    <formaPago>Tarjeta</formaPago>
+</factura>

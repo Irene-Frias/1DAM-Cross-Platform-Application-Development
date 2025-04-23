@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="salida" type="xs:date"/>
+  
+  <!--  Este es el elemento raiz del documento -->
+  <xs:element name="destinos">
+  	<xs:complexType>
+  		<xs:sequence>
+  			<xs:element ref="destino" minOccurs="2" maxOccurs="20" />
+  		</xs:sequence>
+  	</xs:complexType>
+  </xs:element>
+  <xs:element name="destino">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="lugar" type="lugar"/>
+        <xs:element ref="salida" minOccurs="2" maxOccurs="5"/>
+        <xs:element name="precio" type="precio"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="lugar">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="continente" type="continente" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="continente">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Africa"/>
+      <xs:enumeration value="America"/>
+      <xs:enumeration value="Asia"/>
+      <xs:enumeration value="Europa"/>
+      <xs:enumeration value="Oceania"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="cantidad">
+  	<xs:restriction base="xs:decimal">
+  		<xs:fractionDigits value="2"/>
+  	</xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="precio">
+    <xs:attribute name="simple" type="cantidad" use="required"/>
+    <xs:attribute name="doble" type="cantidad" use="required"/>
+  </xs:complexType>
+</xs:schema>

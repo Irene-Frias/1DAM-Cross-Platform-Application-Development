@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Registro.xsd">>
+	<consulta>
+		<paciente>Jesus Jimenez Lopez</paciente>
+		<aseguradora>Adeslas</aseguradora>
+		<sintomas>
+			<sintoma>Dolor abdominal agudo zona mediolateral</sintoma>
+			<sintoma>Fiebre moderada</sintoma>
+		</sintomas>
+		<diagnostico>Infección renal</diagnostico>
+		<tratamientos>
+			<tratamiento>
+				<cuidado>Paracetamol 1000 mg</cuidado>
+				<periodicidad>Cada 8 horas</periodicidad>
+				<comentarios>Si hay dolor</comentarios>
+			</tratamiento>
+			<tratamiento>
+				<cuidado>Amoxicilina 250mg/ml</cuidado>
+				<periodicidad>Cada 8 horas / 7 dias</periodicidad>
+				<comentarios>Ninguno</comentarios>
+			</tratamiento>
+		</tratamientos>
+		<seguimiento>Volver si dolor o hinchazón no remite en 3 días</seguimiento>
+	</consulta>
+	<consulta>
+		<paciente>Angel Sanchez Garcia</paciente>
+		<aseguradora>DKV</aseguradora>
+		<sintomas>
+			<sintoma>Dolor de garganta</sintoma>
+			<sintoma>Tos</sintoma>
+			<sintoma>Mucosidad nasal</sintoma>
+		</sintomas>
+		<diagnostico>Rinofaringitis leve</diagnostico>
+		<tratamientos>
+			<tratamiento>
+				<cuidado>Paracetamol 1000 mg</cuidado>
+				<periodicidad>Cada 8 horas</periodicidad>
+				<comentarios>Si hay dolor o fiebre</comentarios>
+			</tratamiento>
+			<tratamiento>
+				<cuidado>Acetilcisteina 600mg</cuidado>
+				<periodicidad>Cada 24 horas</periodicidad>
+				<comentarios>Segun moco</comentarios>
+			</tratamiento>
+		</tratamientos>
+		<seguimiento>Volver si no remite en una semana</seguimiento>
+	</consulta>
+</registro>

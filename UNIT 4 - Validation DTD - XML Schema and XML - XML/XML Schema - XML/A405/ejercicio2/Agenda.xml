@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agenda.xsd">
+    <contacto fuente="telefono">
+        <nombre>María</nombre>
+        <direccion>Carril de toros</direccion>
+        <comentarios>
+            <comentario>Llamó el 15-02-2025</comentario>
+            <comentario>Llamó el 20-04-2025</comentario>
+        </comentarios>
+        <telefonos>
+            <telefono tipo="Movil personal">+34652825359</telefono>
+        </telefonos>        
+    </contacto>
+    
+    <contacto fuente="telefono">
+        <nombre>CESUR</nombre>
+        <direccion>Calle de Severo Ochoa, 29</direccion>
+        <comentarios>
+            <comentario>Llamó el 10-03-2025</comentario>
+        </comentarios>
+        <telefonos>
+            <telefono tipo="Movil trabajo">+34690007198</telefono>
+            <telefono tipo="Trabajo">+34910053252</telefono>
+        </telefonos>        
+    </contacto>
+</agenda>
+

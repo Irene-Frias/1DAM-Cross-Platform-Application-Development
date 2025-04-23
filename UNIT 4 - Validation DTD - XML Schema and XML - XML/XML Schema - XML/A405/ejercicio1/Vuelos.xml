@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<destinos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vuelos.xsd"> 
+    <destino>
+        <lugar continente="Europa"/>
+        <salida>2025-03-18</salida>
+        <salida>2025-04-20</salida>
+        <precio simple="50" doble="120.55"/>
+    </destino>
+    
+    <destino>
+        <lugar continente="Europa"/>
+        <salida>2025-01-12</salida>
+        <salida>2025-02-02</salida>
+        <precio simple="50" doble="120.55"/>
+    </destino>
+</destinos>
+
