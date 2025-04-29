@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura version="4.0" 
+         referencia="1876523812" 
+         fecha="2024-10-25" 
+         forma-pago="contado" 
+         subtotal="1000.00" 
+         moneda="EUR" 
+         total="1160.00">
+
+    <!-- Emisor -->
+    <emisor cif="A68728823">
+        <nombre>Cagamandurrias S.A.</nombre>
+        <regimen-fiscal>Secuencial</regimen-fiscal>
+    </emisor>
+    
+    <!-- Receptor -->
+    <receptor cif="A61579645">
+        <nombre>Cancanillas S.L.</nombre>
+    </receptor> 
+    
+    <!-- Conceptos -->
+    <conceptos>
+        <concepto claveprodserv="01010101" cantidad="1" valor-unitario="1000.00" importe="1000.00">Tornillos industriales 10mm.</concepto>
+    </conceptos>
+    <impuestos>
+        <impuesto base="1000.00" impuesto="IVA" cuota="0.16">160.00</impuesto>
+    </impuestos>
+</factura>
