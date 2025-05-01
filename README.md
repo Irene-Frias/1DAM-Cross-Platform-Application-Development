@@ -25,6 +25,10 @@ The topics covered during the course are listed below in each of the following s
 - **`XML Schema`** *(XSD - XML Schema Definition)* is a more powerful and flexible alternative to `DTD` for defining the structure and constraints of an `XML` document. It allows specifying data types, element relationships, and validation rules in a more precise way.
 Unlike `DTD`, `XML Schema` is written in `XML` itself, making it more extensible and easier to integrate with modern applications. It supports namespaces, data types (such as integers, dates, and booleans), and complex structures, making it widely used in web services, data validation, and structured information exchange.
 
+### Unit 5 - XSLT Transformations: Concepts, Syntax, and Applications
+- **`XSLT`** *(eXtensible Stylesheet Language Transformations)*  is a language used to transform `XML` documents into different formats, such as `HTML`, plain text, or even other `XML` documents. It separates content from presentation, making it easier to manage and reuse data.
+`XSLT` works by applying a set of templates and rules to an `XML` source, using `XPath` to select specific elements or attributes. The result of the transformation is usually a new document with a structure and appearance tailored to a specific purpose or audience.
+
 ## 📄 Project information
 Visit the project [Wiki](https://github.com/Irene-Frias/Markup-Language/wiki) for more information.
 
