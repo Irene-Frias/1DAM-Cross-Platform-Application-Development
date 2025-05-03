@@ -1,0 +1,5 @@
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="registro.xsd">
+    <entrada>Mañana</entrada>
+    <entrada>Tarde</entrada>
+    <entrada>Noche</entrada>
+</registro>

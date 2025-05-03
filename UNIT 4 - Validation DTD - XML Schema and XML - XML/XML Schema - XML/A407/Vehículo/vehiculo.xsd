@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="fechaDia">
+        <xs:restriction base="xs:date">
+            <xs:minInclusive value="2025-01-01"/>
+            <xs:maxInclusive value="2025-12-31"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fechaMes">
+        <xs:restriction base="xs:gMonthDay">
+            <xs:minInclusive value="01"/>
+            <xs:maxInclusive value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fechaAnyo">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1920"/>
+            <xs:maxInclusive value="2025"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoNumSerie">
+    <xs:restriction base="xs:string">
+        <xs:maxLength value="10"/>
+    </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="vehiculo">     
+        <xs:complexType>            
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="dia" type="fechaDia" />
+                <xs:element name="mes" type="fechaMes"/>
+                <xs:element name="anyo" type="fechaAnyo"/>
+                <xs:element name="modificaciones">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="modificacion" type="xs:string">                 
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="pagada" type="xs:boolean" 
+                                                  default="false"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element> 
+            </xs:sequence>
+            <xs:attribute name="num-serie" type="tipoNumSerie" use="required"/>         
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

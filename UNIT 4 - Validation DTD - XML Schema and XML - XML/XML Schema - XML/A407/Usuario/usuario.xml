@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="usuarios.xsd">>
+    <telefono>654321098</telefono>
+</usuario>

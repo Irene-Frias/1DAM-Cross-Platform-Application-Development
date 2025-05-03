@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vehiculo.xsd"> 
+    <nombre>Seat Ibiza</nombre>
+    <dia>15</dia>
+    <mes>Julio</mes>
+    <anyo>2020</anyo>
+    <modificaciones>
+      <modificacion pagada="true">Cambio de motor</modificacion>
+    </modificaciones>
+</vehiculo>
+

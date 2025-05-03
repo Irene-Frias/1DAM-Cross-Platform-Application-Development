@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:sequence>                
+                <xs:element name="nombre" type="xs:string" minOccurs="1"/>  
+            </xs:sequence>
+            <xs:attribute name="tipo" use="required" default="electronico">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="electronico"/>
+                        <xs:enumeration value="otro"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

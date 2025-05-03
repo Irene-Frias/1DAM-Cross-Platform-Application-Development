@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura numero="F123" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="factura.xsd">
+    <cliente>Empresa S.A</cliente>
+</factura>

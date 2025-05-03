@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona genero="femenino" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="datos-personales.xsd">
+    <nombre>Lucía</nombre>
+    <edad>29</edad>
+</persona>

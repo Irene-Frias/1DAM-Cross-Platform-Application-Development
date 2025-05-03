@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libro.xsd">
+    <titulo>XML Fácil</titulo>
+    <autor>Laura</autor>
+    <capitulo>
+        <titulo>Introducción</titulo>
+        <p>Primeros pasos en <mi>XML</mi>.</p>
+        <p>Cómo usar <i>estructuras básicas</i>.</p>
+    </capitulo>
+</libro>

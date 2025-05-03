@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="opcionLetra">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="B"/>
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="D"/>
+        </xs:restriction>
+    </xs:simpleType>    
+    <xs:element name="respuesta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="opcion" type="opcionLetra" default="A"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
