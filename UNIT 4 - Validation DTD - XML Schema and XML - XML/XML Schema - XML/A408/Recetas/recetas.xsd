@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="tTiempo">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="5"/>
+            <xs:maxInclusive value="300"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tDificultad">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Facil"/>
+            <xs:enumeration value="Media"/>
+            <xs:enumeration value="Dificil"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tUnidad">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="gr"/>
+            <xs:enumeration value="l"/>
+            <xs:enumeration value="ml"/>
+            <xs:enumeration value="cucharadas"/>
+            <xs:enumeration value="pieza"/>
+             <xs:enumeration value="piezas"/>
+            <xs:enumeration value="dientes"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tCalorias">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="50"/>
+            <xs:maxInclusive value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tGrasa">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="5"/> 
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tProteina">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="5"/> 
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    
+    <xs:element name="recetas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="receta" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="tiempo" type="tTiempo"/>
+                            <xs:element name="dificultad" type="tDificultad"/>
+                            
+                            <xs:element name="ingredientes" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingrediente" minOccurs="1"
+                                            maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string"/>
+                                                    <xs:element name="cantidad" type="xs:decimal"/>
+                                                    <xs:element name="unidad" type="tUnidad"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="pasos" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="paso" minOccurs="1"
+                                            maxOccurs="unbounded">
+                                        
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="descripcion" minOccurs="0" maxOccurs="1">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element name="tiempo" type="xs:string"/>
+                                        <xs:element name="temperatura" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="nutricion" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="calorias" type="tCalorias"/>
+                                        <xs:element name="grasa" type="tGrasa"/>
+                                        <xs:element name="proteina" type="tProteina"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>    
+    </xs:element>
+</xs:schema>

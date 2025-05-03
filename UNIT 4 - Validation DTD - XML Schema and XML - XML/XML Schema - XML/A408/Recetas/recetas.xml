@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recetas.xsd">
+    <receta>
+        <nombre>Spaghetti Aglio e Olio</nombre>
+        <tiempo>20</tiempo>
+        <dificultad>Facil</dificultad>
+        <ingredientes>
+            <ingrediente>
+                <nombre>Spaghetti</nombre>
+                <cantidad>200</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Ajo</nombre>
+                <cantidad>4</cantidad>
+                <unidad>dientes</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Aceite de oliva</nombre>
+                <cantidad>50</cantidad>
+                <unidad>ml</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Guindilla</nombre>
+                <cantidad>1</cantidad>
+                <unidad>pieza</unidad>
+            </ingrediente>
+        </ingredientes>
+
+
+        <pasos>
+            <paso>Poner agua con sal a hervir y cocinar los spaghetti 
+                según las indicaciones del paquete.</paso>
+            <paso>En una sartén grande, calentar el aceite de oliva y 
+                dorar los ajos picados y la guindilla.</paso>
+            <paso>Escurrir la pasta y mezclarla con el aceite 
+                aromatizado.</paso>
+        </pasos>
+        <descripcion>
+            Este plato italiano es perfecto para una comida rápida y sabrosa.
+            <tiempo>15 minutos</tiempo>
+            <temperatura>Media</temperatura>
+        </descripcion>
+        <nutricion>
+            <calorias>400</calorias>
+            <grasa>20</grasa>
+            <proteina>10</proteina>                            
+        </nutricion>
+    </receta>
+
+    <receta>
+        <nombre>Ensalada César</nombre>
+        <tiempo>15</tiempo>
+        <dificultad>Facil</dificultad>
+        <ingredientes>
+            <ingrediente>
+                <nombre>Lechuga romana</nombre>
+                <cantidad>200</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Pechuga de pollo</nombre>
+                <cantidad>150</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Pan tostado</nombre>
+                <cantidad>50</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Queso parmesano</nombre>
+                <cantidad>30</cantidad>
+                <unidad>gr</unidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Salsa César</nombre>
+                <cantidad>2</cantidad>
+                <unidad>cucharadas</unidad>
+            </ingrediente>
+        </ingredientes>
+
+        <pasos>
+            <paso>Lavar y cortar la lechuga en trozos medianos.</paso>
+            <paso>Freír la pechuga de pollo y cortarla en tiras.</paso>
+            <paso>Mezclar la lechuga, pollo, pan tostado y queso en 
+                un bol grande.</paso>
+            <paso>Agregar la salsa César y mezclar bien.</paso>
+        </pasos>
+    </receta>        
+</recetas>

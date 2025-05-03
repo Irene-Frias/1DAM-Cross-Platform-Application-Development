@@ -8,9 +8,9 @@
     </xs:simpleType>
 
     <xs:simpleType name="fechaMes">
-        <xs:restriction base="xs:gMonthDay">
-            <xs:minInclusive value="01"/>
-            <xs:maxInclusive value="12"/>
+        <xs:restriction base="xs:gMonth">
+            <xs:minInclusive value="--01"/>
+            <xs:maxInclusive value="--12"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -37,10 +37,10 @@
                 <xs:element name="modificaciones">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="modificacion" type="xs:string">                 
+                            <xs:element name="modificacion">                 
                                 <xs:complexType mixed="true">
                                     <xs:attribute name="pagada" type="xs:boolean" 
-                                                  default="false"/>
+                                        default="false"/>                                    
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>

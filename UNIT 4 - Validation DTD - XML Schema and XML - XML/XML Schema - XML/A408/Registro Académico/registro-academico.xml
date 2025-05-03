@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="registro-academico.xsd">
+    <historial>
+        <estudiante>
+            <nombre>Ana</nombre>
+            <apellidos>López García</apellidos>
+            <fechNac>1998-03-15</fechNac> 
+            <nacionalidad>Espanya</nacionalidad>
+            <dni>12345678A</dni>
+            <genero>F</genero>
+            <titulo>
+                <nombre>Grado en Informática</nombre>
+                <universidad>Universidad Complutense</universidad>
+                <anyoFinalizacion>2022</anyoFinalizacion>
+                <notaMedia>8.5</notaMedia>
+            </titulo>
+            <opcional>
+                <idioma>Inglés</idioma>
+                <nivel>Avanzado</nivel>
+            </opcional>
+        </estudiante> 
+    </historial>
+
+    <historial>
+        <estudiante>
+            <nombre>Juan</nombre>
+            <apellidos>Pérez Ruiz</apellidos>
+            <fechNac>1995-07-09</fechNac> 
+            <nacionalidad>Argentina</nacionalidad>
+            <dni>87654321B</dni>
+            <genero>M</genero>
+            <titulo>
+                <nombre>Grado en Economía</nombre>
+                <universidad>Universidad de Buenos Aires</universidad>
+                <anyoFinalizacion>2020</anyoFinalizacion>
+                <notaMedia>7.2</notaMedia>
+            </titulo>
+            <opcional>
+                <idioma>Alemán</idioma>
+                <nivel>Intermedio</nivel>
+            </opcional>
+        </estudiante> 
+    </historial>
+</registro>

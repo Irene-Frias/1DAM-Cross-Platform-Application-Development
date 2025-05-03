@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="dni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{8}[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="genero">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="F"/>
+        </xs:restriction>
+    </xs:simpleType>
+        
+    <xs:simpleType name="tidioma">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Basico"/>
+            <xs:enumeration value="Intermedio"/>
+            <xs:enumeration value="Avanzado"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tAnyoFinalizacion">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1980"/> 
+            <xs:maxInclusive value="2025"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tNotaMedia">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/> 
+            <xs:maxInclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="registro">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="historial" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="estudiante">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="apellidos" type="xs:string"/>
+                                        <xs:element name="fechNac" type="xs:date"/> 
+                                        <xs:element name="nacionalidad" type="xs:string" 
+                                                default="Espanya"/> 
+                                        <xs:element name="dni" type="dni"/>
+                                        <xs:element name="genero" type="genero"/>
+                                        <xs:element name="titulo">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string"/>
+                                                    <xs:element name="universidad" type="xs:string"/>
+                                                    <xs:element name="anyoFinalizacion" 
+                                                        type="tAnyoFinalizacion"/>
+                                                    <xs:element name="notaMedia" type="tNotaMedia"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="opcional" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="idioma" type="xs:string"/>
+                                                    <xs:element name="nivel" type="tidioma"/>
+                                                </xs:sequence>                                  
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>            
+        </xs:complexType>
+    </xs:element>
+</xs:schema> 
+   
