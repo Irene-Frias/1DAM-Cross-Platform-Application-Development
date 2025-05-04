@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viaje xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libro-viaje.xsd">
+    <nombre>Explorando los Alpes</nombre>
+    <destino>Suiza</destino>
+    <fecha-salida>2025-07-15</fecha-salida>
+    <duracion>10</duracion>
+    <tipo-viaje>Aventura</tipo-viaje>
+    <actividades>
+        <actividad>
+            <nombre>Senderismo en Zermatt</nombre>
+            <descripcion>Recorrido por los senderos del Matterhorn con guía local.</descripcion>
+            <duracion transporte="true">5.5</duracion>
+            <alojamiento>Hotel Alpenblick</alojamiento>
+            <opiniones>
+                <opinion>
+                    <descriptivo>Una experiencia inolvidable, paisajes espectaculares.</descriptivo>
+                    <puntuacion>5</puntuacion>
+                    <fecha>2024-08-10</fecha>
+                </opinion>
+                <opinion>
+                    <descriptivo>Bien organizado, aunque algo exigente físicamente.</descriptivo>
+                    <puntuacion>4</puntuacion>
+                    <fecha>2024-09-02</fecha>
+                </opinion>
+            </opiniones>
+        </actividad>
+    </actividades>
+</viaje>
+

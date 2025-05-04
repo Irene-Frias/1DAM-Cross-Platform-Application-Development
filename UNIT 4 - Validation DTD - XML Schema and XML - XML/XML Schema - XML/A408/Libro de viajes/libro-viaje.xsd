@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="tDuracion">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="365"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tTipoViaje">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Aventura"/>
+            <xs:enumeration value="Cultural"/>
+            <xs:enumeration value="Relajacion"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="tDuracionAct">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="transporte" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType> 
+    
+    <xs:simpleType name="tPuntuacion">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:element name="viaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="destino" type="xs:string"/> 
+                <xs:element name="fecha-salida" type="xs:date"/>
+                <xs:element name="duracion" type="tDuracion"/>
+                <xs:element name="tipo-viaje" type="tTipoViaje"/>
+                
+                <xs:element name="actividades" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="actividad">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="descripcion" type="xs:string"/>
+                                        <xs:element name="duracion" type="tDuracionAct"/>
+                                        <xs:element name="alojamiento" type="xs:string"/>
+                                        <xs:element name="opiniones">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="opinion" minOccurs="1" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="descriptivo" type="xs:string"/>
+                                                                <xs:element name="puntuacion" type="tPuntuacion"/>
+                                                                <xs:element name="fecha" type="xs:date"/>
+                                                            </xs:sequence>                                                                
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                                                               
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

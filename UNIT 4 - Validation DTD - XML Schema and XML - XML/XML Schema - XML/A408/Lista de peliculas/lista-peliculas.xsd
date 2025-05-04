@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="tAnyoEstreno">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2025"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tGenero">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="accion"/>
+            <xs:enumeration value="drama"/>
+            <xs:enumeration value="comedia"/>
+            <xs:enumeration value="romantica"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tDuracion">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="30"/>
+            <xs:maxInclusive value="300"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tClasificacion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="G"/>
+            <xs:enumeration value="PG"/>
+            <xs:enumeration value="PG-13"/>
+            <xs:enumeration value="R"/>
+            <xs:enumeration value="NC-17"/>
+        </xs:restriction>
+    </xs:simpleType>
+       
+    <xs:simpleType name="tDecimalPuntuacion">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="10.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tCalificacionPuntos">
+        <xs:simpleContent>
+            <xs:extension base="tDecimalPuntuacion">
+                <xs:attribute name="subtitulada" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="tSipnosis">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="estreno" type="xs:date"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType> 
+    
+    
+    <xs:element name="peliculas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pelicula">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="anyoEstreno" type="tAnyoEstreno"/>
+                            <xs:element name="genero" type="tGenero"/>
+                            <xs:element name="duracion" type="tDuracion"/>
+                            <xs:element name="clasificacion" type="tClasificacion"/>
+                            <xs:element name="director" type="xs:string"/>
+                            
+                            <xs:element name="actores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="actor" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string"/>
+                                                    <xs:element name="personaje" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>    
+                            </xs:element>
+                            
+                            <xs:element name="calificacion" type="tCalificacionPuntos"/>
+                            <xs:element name="sipnosis" type="tSipnosis"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

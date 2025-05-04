@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peliculas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="lista-peliculas.xsd">
+    <pelicula>
+        <titulo>La Sombra del Viento</titulo>
+        <anyoEstreno>2022</anyoEstreno>
+        <genero>drama</genero>
+        <duracion>142</duracion>
+        <clasificacion>PG-13</clasificacion>
+        <director>Claudia Martínez</director>
+        <actores>
+            <actor>
+                <nombre>Javier Rey</nombre>
+                <personaje>Daniel Sempere</personaje>
+            </actor>
+            <actor>
+                <nombre>Aura Garrido</nombre>
+                <personaje>Beatriz Aguilar</personaje>
+            </actor>
+        </actores>
+        <calificacion subtitulada="true">8.6</calificacion>
+        <sipnosis estreno="2022-10-14">Adaptación cinematográfica del bestseller 
+            de Carlos Ruiz Zafón, donde un joven descubre un misterioso libro 
+            que cambiará su vida en la Barcelona de posguerra.</sipnosis>
+    </pelicula>
+</peliculas>
