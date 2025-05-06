@@ -1,0 +1,587 @@
+# EJERCICIO 1 - RRHH
+
+CREATE DATABASE IF NOT EXISTS RRHH CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE RRHH;
+
+CREATE table IF NOT EXISTS empleados
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY, 	 
+nombre			VARCHAR(50)		NOT NULL,
+fechNacimiento	DATE			NOT NULL,
+salario			DECIMAL(8,2)	NOT NULL,
+idDepartamento	VARCHAR(50)		NOT NULL);
+
+
+CREATE table IF NOT EXISTS departamentos
+(nombre			VARCHAR(50)		NOT NULL	PRIMARY KEY, 
+numDespacho		TINYINT			UNSIGNED NULL,
+idJefe			CHAR(9)		NOT NULL);
+
+ALTER TABLE empleados ADD CONSTRAINT emp_dpt_fk FOREIGN KEY (idDepartamento) REFERENCES departamentos(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE departamentos ADD CONSTRAINT dpt_emp_fk FOREIGN KEY (idJefe) REFERENCES empleados(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_empleado_nombre ON empleados(nombre);
+
+
+# EJERCICIO 2 - Despachos
+
+CREATE DATABASE IF NOT EXISTS despachos CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE despachos;
+
+CREATE TABLE IF NOT EXISTS edificio
+(nombre			VARCHAR(50)			NOT NULL	PRIMARY KEY,
+numDespachos	TINYINT 			UNSIGNED NOT NULL,
+idPoligonoInd	VARCHAR(50) 		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS departamento 
+(nombre 		VARCHAR(50)				NOT NULL	PRIMARY KEY,
+numEmpleados	SMALLINT				UNSIGNED NOT NULL);
+
+CREATE TABLE IF NOT EXISTS distribuido 
+(idDepartamento 	VARCHAR(50)			NOT NULL,
+idEdificio 			VARCHAR(50)			NOT NULL,
+numDptos			TINYINT				UNSIGNED NOT NULL,
+CONSTRAINT PRIMARY KEY (idDepartamento, idEdificio));
+
+CREATE TABLE IF NOT EXISTS poligonoInd
+(nombre		varchar(50) 	NOT NULL	PRIMARY KEY,
+ciudad		varchar(50)	NOT NULL);
+
+ALTER TABLE distribuido ADD CONSTRAINT dis_edi_fk FOREIGN KEY (idEdificio) REFERENCES edificio(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE distribuido ADD CONSTRAINT dis_dpt_fk FOREIGN KEY (idDepartamento) REFERENCES departamento(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE edificio ADD CONSTRAINT edi_pol_fk FOREIGN KEY (idPoligonoInd) REFERENCES poligonoInd(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX idx_poligonoInd_ciudad ON poligonoInd(ciudad);
+
+
+# EJERCICIO 3 - Geografía
+
+CREATE DATABASE IF NOT EXISTS geografia CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE geografia;
+
+CREATE TABLE IF NOT EXISTS rio
+(nombre		VARCHAR(100)	NOT NULL,
+longitud	INTEGER			NOT NULL,
+caudal		DECIMAL(8,2)	NOT NULL,
+CONSTRAINT PRIMARY KEY (nombre));
+
+CREATE TABLE IF NOT EXISTS discurre 
+(idRio 		VARCHAR(100)		NOT NULL,
+idCCAA		VARCHAR(100)		NOT NULL,
+kilometros	INTEGER 			UNSIGNED NOT NULL,
+CONSTRAINT PRIMARY KEY (idRio, idCCAA)); 
+
+CREATE TABLE IF NOT EXISTS CCAA
+(nombre 		VARCHAR(100)	NOT NULL PRIMARY KEY,
+numHabitantes	INTEGER 		UNSIGNED NOT NULL); 
+
+CREATE TABLE IF NOT EXISTS pasa 
+(idRio 		VARCHAR(100)	NOT NULL,
+idCiudad	VARCHAR(100)	NOT NULL,
+CONSTRAINT PRIMARY KEY (idRio, idCiudad)); 
+
+CREATE TABLE IF NOT EXISTS ciudad
+(nombre			VARCHAR(100)	NOT NULL	PRIMARY KEY,
+numHabitantes	INTEGER			UNSIGNED NOT NULL, 
+idCCAA			VARCHAR(100)	NOT NULL); 
+
+
+ALTER TABLE discurre ADD CONSTRAINT FOREIGN KEY (idRio) REFERENCES rio(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE discurre ADD CONSTRAINT FOREIGN KEY (idCCAA) REFERENCES CCAA(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE pasa ADD CONSTRAINT FOREIGN KEY (idRio) REFERENCES rio(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE pasa ADD CONSTRAINT FOREIGN KEY (idCiudad) REFERENCES ciudad(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE ciudad ADD CONSTRAINT FOREIGN KEY (idCCAA) REFERENCES CCAA(nombre)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+# EJERCICIO 4 - Autobuses 
+
+CREATE DATABASE IF NOT EXISTS autobuses CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE autobuses;
+
+CREATE TABLE IF NOT EXISTS conductor
+(dni			CHAR(9)				NOT NULL 	PRIMARY KEY,
+nombre			VARCHAR(100)		NOT NULL,
+primerApellido	VARCHAR(100)		NOT NULL,
+antig			INTEGER				NOT NULL);
+
+CREATE TABLE IF NOT EXISTS autobus 
+(linea 		INTEGER 		NOT NULL 	PRIMARY KEY,
+asientos	INTEGER			NOT NULL);
+
+CREATE TABLE IF NOT EXISTS asignado 
+(idConductor1	CHAR(9)		NOT NULL,
+idConductor2	CHAR(9)		NOT NULL,
+idDia			DATE		NOT NULL,
+idAutobus		CHAR(3)		NOT NULL,
+CONSTRAINT PRIMARY KEY(idConductor1, idConducto2));
+
+CREATE TABLE IF NOT EXISTS parada 
+(direccion			VARCHAR(100)	NOT NULL	PRIMARY KEY,
+horaPrimLlegada		TIME			NOT NULL,
+frecuencia			TIME			NOT NULL);
+
+CREATE TABLE IF NOT EXISTS realiza
+(idAutobus		INTEGER		NOT NULL, 
+idParada		CHAR(3)		NOT NULL,
+CONSTRAINT PRIMARY KEY(idAutobus, idParada));
+
+ALTER TABLE asignado ADD CONSTRAINT FOREIGN KEY (idConductor1) REFERENCES conductor(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE asignado ADD CONSTRAINT FOREIGN KEY (idConductor2) REFERENCES conductor(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE asignado ADD CONSTRAINT FOREIGN KEY (idAutobus) REFERENCES autobus(linea)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE realiza ADD CONSTRAINT FOREIGN KEY (idAutobus) REFERENCES autobus(linea)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE realiza ADD CONSTRAINT FOREIGN KEY (idParada) REFERENCES parada(direccion)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_conductor_nombre ON conductor(nombre);
+
+CREATE INDEX indx_conductor_primApell ON conductor(primerApellido);
+
+
+# EJERCICIO 5 - Inmuebles 
+
+CREATE DATABASE IF NOT EXISTS inmuebles CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE inmuebles;
+
+CREATE TABLE IF NOT EXISTS persona
+(dni			CHAR(9)			NOT NULL		PRIMARY KEY,
+nombre			VARCHAR(50)		NOT NULL,
+primApellido	VARCHAR(100)	NOT NULL,
+segApellido		VARCHAR(100)	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS pertenece
+(propietario	CHAR(9)			NOT NULL		PRIMARY KEY,
+direccion		VARCHAR(150)	NOT NULL,
+CONSTRAINT PRIMARY KEY (propietario, direccion));
+
+CREATE TABLE IF NOT EXISTS vivienda
+(direccion		VARCHAR(150)	NOT NULL		PRIMARY KEY,
+superficie		DECIMAL(13,2)	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS poliza
+(numPoliza		VARCHAR(150)	NOT NULL		PRIMARY KEY,
+propietario		CHAR(9)			NOT NULL,
+inmueble		VARCHAR(150)	NOT NULL,
+ctdAsegurada	DECIMAL(13,2)	NOT NULL,
+cuota			DECIMAL(13,2)	NOT NULL,
+tipo			VARCHAR(50)		NOT NULL);
+
+ALTER TABLE pretenece ADD CONSTRAINT fk_per_pers 
+FOREIGN KEY (propietario) REFERENCES persona(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE pretenece ADD CONSTRAINT fk_per_viv 
+FOREIGN KEY (direccion) REFERENCES vivienda(direccion)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE poliza ADD CONSTRAINT fk_pol_pers
+FOREIGN KEY (propietario) REFERENCES persona(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE poliza ADD CONSTRAINT fk_pol_viv 
+FOREIGN KEY (inmueble) REFERENCES vivienda(direccion)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_nom ON persona(nombre, primApellido, segApellido);
+
+
+# EJERCICIO 6 - Telefónica
+
+CREATE DATABASE IF NOT EXISTS telefonica CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE telefonica;
+
+CREATE TABLE IF NOT EXISTS terminal 
+(numero				CHAR(3)			NOT NULL	PRIMARY KEY,
+tipo				VARCHAR(50)		NOT NULL,
+nombre_abonado		VARCHAR(50)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS llamada 
+(id_emisor			CHAR(3)			NOT NULL,
+id_receptor			VARCHAR(50)		NOT NULL,
+duracion			TIME			NOT NULL,
+fechComienzo		DATE			NOT NULL,
+CONSTRAINT PRIMARY KEY (id_emisor, id_receptor, fechComienzo),
+UNIQUE (id_emisor, id_receptor, fechComienzo));
+
+ALTER TABLE llamada ADD CONSTRAINT fk_lla_ter_emi 
+FOREIGN KEY (id_emisor) REFERENCES terminal(numero)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE llamada ADD CONSTRAINT fk_lla_ter_rep
+FOREIGN KEY (id_receptor) REFERENCES terminal(numero)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+# EJERCICIO 7 - Horarios
+
+CREATE DATABASE IF NOT EXISTS horarios CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE horarios;
+
+CREATE TABLE IF NOT EXISTS profesor 
+(id_profesor		CHAR(3)			NOT NULL	PRIMARY KEY,
+nombre				VARCHAR(50)		NOT NULL,
+departamento		VARCHAR(50)		NOT NULL); 
+
+CREATE TABLE IF NOT EXISTS aula 
+(numero				INTEGER			NOT NULL	PRIMARY KEY,
+capacidad			DECIMAL(12,3)	NOT NULL,
+num_ordanadores		INTEGER			NULL,
+altoPizarra			DECIMAl(12,2)	NULL,
+anchoPizarra		DECIMAL(12,3)	NULL);
+
+CREATE TABLE IF NOT EXISTS asignatura
+(id_asignatura		INTEGER			NOT NULL	PRIMARY KEY,
+nombre				VARCHAR(50)		NOT NULL,
+cuatrimestre		TINYINT			NOT NULL,
+aula				INTEGER			NOT NULL,
+altoPizarra			CHAR(3)			NOT NULL);
+
+ALTER TABLE asignatura ADD CONSTRAINT fk_asg_aul 
+FOREIGN KEY (aula) REFERENCES aula(numero)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE asignatura ADD CONSTRAINT fk_asg_pro
+FOREIGN KEY (profesor) REFERENCES profesor(id_profesor)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_pro_nom ON profesor(nombre);
+CREATE INDEX indx_pro_dep ON profesor(departamento);
+
+
+# EJERCICIO 8 - Tráfico
+
+CREATE DATABASE IF NOT EXISTS trafico CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE trafico;
+
+CREATE TABLE IF NOT EXISTS propietario 
+(dni					CHAR(9)			NOT NULL	PRIMARY KEY,
+nombre					VARCHAR(50)		NOT NULL,
+apellidos				VARCHAR(50)		NOT NULL,
+añosCarnetConducir		SMALLINT(4)		NOT NULL); 
+
+CREATE TABLE IF NOT EXISTS vehiculo 
+(matricula				CHAR(7)			NOT NULL	PRIMARY KEY,
+marca					VARCHAR(50)		NOT NULL,
+id_proietario			CHAR(9)			NOT NULL); 
+
+CREATE TABLE IF NOT EXISTS coche 
+(matricula 				CHAR(7)			NOT NULL	PRIMARY KEY,
+numPuertas				TINYINT			NOT NULL); 
+
+CREATE TABLE IF NOT EXISTS moto
+(matricula 				CHAR(7)			NOT NULL	PRIMARY KEY); 
+
+CREATE TABLE IF NOT EXISTS camion 
+(matricula 				CHAR(7)			NOT NULL	PRIMARY KEY,
+tara					DECIMAL(12,2)	NOT NULL); 
+
+ALTER TABLE coche ADD CONSTRAINT fk_coh_veh
+FOREIGN KEY (matricula) REFERENCES vehiculo(matricula)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE moto ADD CONSTRAINT fk_mot_veh
+FOREIGN KEY (matricula) REFERENCES vehiculo(matricula)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE camion ADD CONSTRAINT fk_cam_veh
+FOREIGN KEY (matricula) REFERENCES vehiculo(matricula)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+# EJERCICIO 9 - Editorial
+
+CREATE DATABASE IF NOT EXISTS editorial CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE editorial;
+
+CREATE TABLE IF NOT EXISTS periodista
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY,
+nombre 			VARCHAR(50)		NOT NULL,
+apellidos		VARCHAR(50)		NOT NULL,
+telefono		CHAR(9)			NOT NULL,
+especialidad	VARCHAR(100) 	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS colabora
+(id_revista			CHAR(12)			NOT NULL,
+id_periodista		CHAR(9)			NOT NULL,
+CONSTRAINT PRIMARY KEY (id_revista, id_periodista));
+ 
+CREATE TABLE IF NOT EXISTS empleado
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY,
+nombre 			VARCHAR(50)		NOT NULL,
+apellidos		VARCHAR(50)		NOT NULL,
+telefono		CHAR(9)			NOT NULL,
+id_sucursal		CHAR(12)	 	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS sucursal
+(codigo			CHAR(12)		NOT NULL	PRIMARY KEY,
+direccion		VARCHAR(50)		NOT NULL,
+telefono		CHAR(9)			NOT NULL);
+
+CREATE TABLE IF NOT EXISTS revista
+(numRegistro	CHAR(12)		NOT NULL	PRIMARY KEY,
+titulo			VARCHAR(50)		NOT NULL,
+periocidad		CHAR(9)			NOT NULL,
+tipo			VARCHAR(50)		NOT NULL,
+id_sucursal		CHAR(12)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS seccion
+(id_revista		CHAR(12)		NOT NULL	PRIMARY KEY,
+titulo			VARCHAR(50)		NOT NULL,
+extension		TINYINT			NOT NULL);
+
+CREATE TABLE IF NOT EXISTS numero
+(id_revista				CHAR(12)		NOT NULL	PRIMARY KEY,
+fecha					DATE			NOT NULL,
+paginas					INTEGER			NOT NULL,
+ejemplaresVendidos		INTEGER			NOT NULL,
+id_sucursal				CHAR(12)		NOT NULL);
+
+ALTER TABLE colabora ADD CONSTRAINT fk_col_per
+FOREIGN KEY (id_periodista) REFERENCES periodista(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE colabora ADD CONSTRAINT fk_col_rev
+FOREIGN KEY (id_revista) REFERENCES revista(numRegistro)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE empleado ADD CONSTRAINT fk_emp_rev
+FOREIGN KEY (id_sucursal) REFERENCES sucursal(codigo)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE revista ADD CONSTRAINT fk_rev_suc
+FOREIGN KEY (id_sucursal) REFERENCES sucursal(codigo)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE seccion ADD CONSTRAINT fk_sec_rev
+FOREIGN KEY (id_revista) REFERENCES revista(numRegistro)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE numero ADD CONSTRAINT fk_num_rev
+FOREIGN KEY (id_revista) REFERENCES revista(numRegistro)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_per_nom_ape ON periodista(nombre, apellidos);
+CREATE INDEX indx_emp_nom_ape ON empleado(nombre, apellidos);
+CREATE INDEX indx_rev_tipo ON revista(tipo);
+
+
+# EJERCICIO 10 - Hosteleria
+
+CREATE DATABASE IF NOT EXISTS hosteleria CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE hosteleria;
+
+CREATE TABLE IF NOT EXISTS empleado
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY,
+nombre			VARCHAR(50)		NOT NULL,
+direccion		VARCHAR(50)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS trabaja
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY,
+cif				CHAR(8)			NOT NULL,
+funcion 		VARCHAR(50)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS recaudacion
+(id_pub			CHAR(9)			NOT NULL,
+fecha			DATE			NOT NULL,
+cantidad		SMALLINT		NOT NULL,
+CONSTRAINT PRIMARY KEY (id_pub, fecha));
+
+CREATE TABLE IF NOT EXISTS pub
+(cif			CHAR(8)			NOT NULL	PRIMARY KEY,
+nombre			VARCHAR(50)		NOT NULL,
+direccion		VARCHAR(50)		NOT NULL,
+fechApertura	DATE			NOT NULL,
+horario			TIME 			NOT NULL,
+diasApertura	VARCHAR(20)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS espropietario
+(id_pub			CHAR(9)			NOT NULL,
+id_propietario	CHAR(9)			NOT NULL,
+cantidad		SMALLINT		NOT NULL,
+CONSTRAINT PRIMARY KEY (id_pub, id_propietario));
+
+CREATE TABLE IF NOT EXISTS propietario
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY,
+nombre			VARCHAR(50)		NOT NULL,
+direccion		VARCHAR(50)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS pedido
+(numero			TINYINT			NOT NULL	PRIMARY KEY,
+fecha			DATE			NOT NULL,
+proveedor		VARCHAR(50)		NOT NULL,
+precioTotal		DECIMAL(12,3)	NOT NULL,
+id_pub			CHAR(9) 		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS detalle_pedido
+(id_pedido		TINYINT			NOT NULL,
+id_articulo		CHAR(12)		NOT NULL,
+cantidad		SMALLINT		NOT NULL,
+CONSTRAINT PRIMARY KEY (id_pedido, id_articulo));
+
+CREATE TABLE IF NOT EXISTS articulo
+(codigo			CHAR(12)		NOT NULL	PRIMARY KEY,
+nombre			VARCHAR(50)		NOT NULL,
+precio			DECIMAL(12,3)	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS existencias
+(id_pub			CHAR(9)			NOT NULL	PRIMARY KEY,
+id_articulo		CHAR(12)		NOT NULL,
+cantidad		SMALLINT		NOT NULL,
+CONSTRAINT PRIMARY KEY (id_pedido, id_articulo));
+
+ALTER TABLE trabaja ADD CONSTRAINT fk_tra_empl
+FOREIGN KEY (dni) REFERENCES empleado(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE recaudacion ADD CONSTRAINT fk_rec_pub
+FOREIGN KEY (id_pub) REFERENCES pub(cif)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE espropietario ADD CONSTRAINT fk_exp_pub
+FOREIGN KEY (id_pub) REFERENCES pub(cif)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE espropietario ADD CONSTRAINT fk_esp_pro
+FOREIGN KEY (id_propietario) REFERENCES propietario(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE detalle_pedido ADD CONSTRAINT fk_del_ped
+FOREIGN KEY (id_pedido) REFERENCES pedido(numero)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE detalle_pedido ADD CONSTRAINT fk_del_art
+FOREIGN KEY (id_articulo) REFERENCES articulo(codigo)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE existencias ADD CONSTRAINT fk_exi_pub
+FOREIGN KEY (id_pub) REFERENCES pub(cif)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE existencias ADD CONSTRAINT fk_exi_art
+FOREIGN KEY (id_articulo) REFERENCES articulo(codigo)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_empl_nom ON empleado(nombre);
+
+CREATE INDEX indx_pub_nom ON pub(nombre);
+
+CREATE INDEX indx_art_nom ON articulo(nombre);
+
+
+# EJERCICIO 11 - ETT
+
+CREATE DATABASE IF NOT EXISTS ETT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+
+USE ETT;
+
+CREATE TABLE IF NOT EXISTS empresa
+(cif		CHAR(8)			NOT NULL	PRIMARY KEY,
+nombre		VARCHAR(50)		NOT NULL,
+sector		VARCHAR(100)	NOT NULL);
+
+
+CREATE TABLE IF NOT EXISTS multinacional
+(id_empresa		CHAR(8)			NOT NULL	PRIMARY KEY,
+numPaises		TINYINT			NOT NULL);
+
+CREATE TABLE IF NOT EXISTS pyme
+(id_empresa		CHAR(8)			NOT NULL	PRIMARY KEY,
+ciudad			VARCHAR(50)		NOT NULL);
+
+CREATE TABLE IF NOT EXISTS oferta
+(codigo			CHAR(12)		NOT NULL	PRIMARY KEY,
+profesion		VARCHAR(50)		NOT NULL,
+lugar			VARCHAR(50)		NOT NULL,
+condiciones 	VARCHAR(50)		NOT NULL,
+id_empresa		CHAR(8)			NOT NULL);
+
+CREATE TABLE IF NOT EXISTS contrato
+(id_oferta		CHAR(12)		NOT NULL	PRIMARY KEY,
+id_persona		CHAR(9)			NOT NULL,
+fechContrato	DATE			NOT NULL,
+duracion	 	TINYINT			UNSIGNED,
+sueldo			DECIMAL(7,2)	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS persona
+(dni			CHAR(9)			NOT NULL	PRIMARY KEY,
+nombre			VARCHAR(50)		NOT NULL,
+estudios		VARCHAR(100)	NOT NULL,
+profesion		VARCHAR(100)	NOT NULL);
+
+CREATE TABLE IF NOT EXISTS interesa
+(id_persona		CHAR(9)			NOT NULL,
+id_empleo		CHAR(12)		NOT NULL,
+CONSTRAINT PRIMARY KEY (id_persona, id_empleo));
+
+
+ALTER TABLE multinacional ADD CONSTRAINT fk_mul_emp
+FOREIGN KEY (id_empresa) REFERENCES empresa(cif)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE pyme ADD CONSTRAINT fk_pym_emp
+FOREIGN KEY (id_empresa) REFERENCES empresa(cif)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE oferta ADD CONSTRAINT fk_mul_id
+FOREIGN KEY (id_empresa) REFERENCES empresa(cif)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE contrato ADD CONSTRAINT fk_con_ofe
+FOREIGN KEY (id_oferta) REFERENCES oferta(codigo)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE contrato ADD CONSTRAINT fk_con_per
+FOREIGN KEY (id_persona) REFERENCES persona(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE interesa ADD CONSTRAINT fk_con_per_dni
+FOREIGN KEY (id_persona) REFERENCES persona(dni)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE interesa ADD CONSTRAINT fk_con_ofe_cod
+FOREIGN KEY (id_empleo) REFERENCES oferta(codigo)
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+CREATE INDEX indx_per_nom ON persona(nombre);
+
+CREATE INDEX indx_per_pro ON persona(profesion);
+
+CREATE INDEX indx_emp_nom ON empresa(nombre);
+
+CREATE INDEX indx_emp_sec ON empresa(sector);
+
+CREATE INDEX indx_ofe_pro ON oferta(profesion);
+
