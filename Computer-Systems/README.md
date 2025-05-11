@@ -1,7 +1,5 @@
 # Computer-Systems
-Computer-Systems exercises carried out for the subject of Cross-Platform Application Development at I.E.S. Belén (Málaga).
-
-Most of the exercises in this repository are based on classroom materials, teacher-guided tasks, and practical work using virtual machines and operating system tools. For some references and tools, we also rely on online resources such as the official software documentation.
+Computer-Systems exercises carried out for the subject of Cross-Platform Application Development at I.E.S. Belén (Málaga). Most of the exercises in this repository are based on classroom materials, teacher-guided tasks, and practical work using virtual machines and operating system tools. For some references and tools, we also rely on online resources such as the official software documentation.
 
 To begin working with system configurations and network practices, we will use environments such as [`VirtualBox`](https://www.virtualbox.org/) and others.
 
