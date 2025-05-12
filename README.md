@@ -1,5 +1,13 @@
 # EN PROCESO DE CREACIÓN 
  ---
+## 📚 Table of Contents
+- [About](#-about)
+- [Subjects](#-subjects)
+- [Technologies Used](#-technologies-used)
+- [How to Use This Repository](#-how-to-use-this-repository)
+- [Developer](#-developer)
+- [License](#-license)
+ 
 ## 📌 About  
 This repository contains exercises, projects, and resources developed during the **Cross-Platform Application Development** (Grado Superior en Desarrollo de Aplicaciones Multiplataforma - DAM) course at **I.E.S. Belén (Málaga)**.
 
@@ -9,19 +17,11 @@ Each folder is organized by subject and includes work related to key areas such 
 
 This repository is part of the learning portfolio and reflects the skills acquired throughout the training process.
 
-## 📚 Table of Contents
-- [About](#-about)
-- [Subjects](#-subjects)
-- [Technologies Used](#-technologies-used)
-- [How to Use This Repository](#-how-to-use-this-repository)
-- [Author](#-author)
-- [License](#-license)
-
 ## 📦 Subjects
 - [Programming](./Programming)
-- [Databases](./Databases)
-- [Computer Systems](./Computer-Systems)
-- [Web Development (Markup Languages)](./Markup-Languages)
+- [Databases](https://github.com/Irene-Frias/1DAM-Cross-Platform-Application-Development/tree/main/Database)
+- [Computer Systems](https://github.com/Irene-Frias/1DAM-Cross-Platform-Application-Development/tree/main/Computer-Systems)
+- [Web Development (Markup Languages)](https://github.com/Irene-Frias/1DAM-Cross-Platform-Application-Development/tree/main/Markup-Language)
 - [Development Environments](./Development-Environments)
 - [Digitalization](./Digitalization)
 - [Sustainability](./Sustainability)
@@ -37,14 +37,15 @@ This repository is part of the learning portfolio and reflects the skills acquir
 - Git / GitHub
 
 ## 🚀 How to Use This Repository
-1. Clone the repository:  
-   `git clone https://github.com/your-username/your-repo.git`
+**1.** Clone the repository:
+   ```cmd
+   git clone https://github.com/your-username/your-repo.git
+   ```
+**2.** Navigate to the subject folder you want to explore.
 
-2. Navigate to the subject folder you want to explore.
+**3.** Open project files using your preferred editor, such as Visual Studio Code.
 
-3. Open project files using your preferred editor (recommended: Visual Studio Code).
-
-4. Run exercises and modify them as needed for practice or reference.
+**4.** Run exercises and modify them as needed for practice or reference.
 
 ## 📄 License
 This project is licensed under the MIT License.  
