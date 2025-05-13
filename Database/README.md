@@ -24,7 +24,7 @@ The topics covered during the course are listed below in each of the following s
 - *PL-SQL (Procedural Language for SQL)* extends SQL with procedural capabilities, allowing developers to write complex scripts, stored procedures, functions, and triggers within a database. This unit covers PL/SQL syntax, control structures, exception handling, and optimizing stored routines for performance and security.
 
 ## 📄 Project information
-Visit the project [Wiki]([https://github.com/Irene-Frias/1DAM-Cross-Platform-Application-Development/tree/main/Database](https://github.com/Irene-Frias/1DAM-Cross-Platform-Application-Development/wiki/Inicio-a-Base-de-Datos)) for more information.
+Visit the project [Wiki](https://github.com/Irene-Frias/1DAM-Cross-Platform-Application-Development/wiki/Inicio-a-Base-de-Datos) for more information.
 
 ## 👩‍💻 Developer
 Irene Frias Ramos
