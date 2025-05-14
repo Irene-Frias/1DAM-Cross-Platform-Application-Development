@@ -1,0 +1,27 @@
+
+    {
+        "referencia": "1876523812",
+        "fecha": "2024-10-25",
+        "subtotal": "1000.00",
+        "total": "1160.00",
+        "emisor": {
+        "cif": "A68728823",
+        "nombre": "Cagamandurrias S.A."
+        },
+        "receptor": {
+        "cif": "A61579645",
+        "nombre": "Cancanillas S.L."
+        },
+        "producto": {
+        "nombre": "Tornillos industriales 10mm.",
+        "precioUnitario": "1000.00",
+        "cantidad": "1",
+        "importe": "1000.00"
+        },
+        "impuesto": {
+        "tipo": "IVA",
+        "cuota": "0.16",
+        "importe": "160.00",
+        }
+    }
+    

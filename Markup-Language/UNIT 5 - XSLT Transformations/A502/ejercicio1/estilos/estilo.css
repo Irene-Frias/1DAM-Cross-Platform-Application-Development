@@ -1,0 +1,21 @@
+header {
+    color: white;
+    font-size: 30px;
+    background-color: blue;
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+}
+
+h3 {
+    color: blue;
+    background: lightgreen;
+    padding: 10px 0px 10px 0px;
+}
+
+.negrita {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkcyan;      
+    text-align: left;
+    padding: 5px 50px 5px 50px;
+}
